@@ -3,66 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer Portfolio</title>
+  <title>Cybersecurity & Full Stack Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-theme="dark">
 
   <header role="banner">
     <nav aria-label="Main Navigation">
-      <div class="logo">MyPortfolio</div>
+      <div class="logo">
+        <span class="terminal-prompt">&gt;_</span> SEC_DEV.IO
+      </div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#projects">Specializations</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Toggle Theme</button>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Theme Switch</button>
     </nav>
   </header>
 
   <main role="main">
+    <!-- Hero Section -->
     <section id="about" class="hero">
-      <img src="https://via.placeholder.com/150" alt="Profile picture of the developer smiling" class="profile-img">
-      <h1>Hello, I'm a Web Developer</h1>
-      <p>Building accessible, responsive, and clean digital experiences.</p>
-    </section>
-
-    <section id="projects" class="container">
-      <h2>Featured Projects</h2>
-      <div class="project-grid">
-        <article class="card">
-          <img src="https://via.placeholder.com/300x180" alt="Screenshot of a web application interface showing data analytics charts" class="card-img">
-          <h3>Project One</h3>
-          <p>A responsive web app built with HTML, CSS, and JavaScript.</p>
-        </article>
-        <article class="card">
-          <img src="https://via.placeholder.com/300x180" alt="Screenshot of an e-commerce website product page" class="card-img">
-          <h3>Project Two</h3>
-          <p>An interactive portfolio featuring dynamic theme switching.</p>
-        </article>
+      <div class="hero-content">
+        <div class="status-badge"><span class="pulse-dot"></span> System Online | Defense & Development</div>
+        <h1>Cybersecurity Specialist &amp; Full Stack Engineer</h1>
+        <p class="hero-bio">
+          Combining elite threat intelligence, incident response, and enterprise system analysis with full-stack Microsoft engineering. Architecting impenetrable security infrastructures while building high-performance web applications.
+        </p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn primary-btn">Initiate Contact</a>
+          <a href="#credentials" class="btn secondary-btn">View Certifications</a>
+        </div>
       </div>
     </section>
 
+    <!-- Credentials & Diplomas -->
+    <section id="credentials" class="container">
+      <h2 class="section-title">Certifications &amp; Diplomas</h2>
+      <div class="credentials-grid">
+        
+        <article class="cred-card">
+          <div class="cred-icon">🛡️</div>
+          <h3>IBM Cybersecurity Analyst</h3>
+          <p class="cred-org">IBM Authorized Certification</p>
+          <p>Specialized in continuous monitoring, threat detection, network security governance, and security operations center (SOC) workflows.</p>
+        </article>
+
+        <article class="cred-card">
+          <div class="cred-icon">🔒</div>
+          <h3>ISC² Security Professional</h3>
+          <p class="cred-org">ISC² Certified</p>
+          <p>Proficient in international cybersecurity standards, access controls, risk management framework, and infrastructure defense.</p>
+        </article>
+
+        <article class="cred-card">
+          <div class="cred-icon">🎯</div>
+          <h3>CTI &amp; IR Specialist</h3>
+          <p class="cred-org">Threat Intel &amp; Incident Response</p>
+          <p>Expertise in Cyber Threat Intelligence (CTI) gathering, attack vector mitigation, digital forensics, and active breach response.</p>
+        </article>
+
+        <article class="cred-card">
+          <div class="cred-icon">⚡</div>
+          <h3>Microsoft Full Stack Developer</h3>
+          <p class="cred-org">Frontend &amp; Backend Diplomas</p>
+          <p>End-to-end web architectures using modern JavaScript frameworks, C#/.NET backend APIs, database management, and cloud integrations.</p>
+        </article>
+
+        <article class="cred-card">
+          <div class="cred-icon">📊</div>
+          <h3>IBM Systems Analyst</h3>
+          <p class="cred-org">Enterprise Systems Architecture</p>
+          <p>Designing scalable IT enterprise infrastructures, optimizing data flows, and aligning system requirements with security models.</p>
+        </article>
+
+        <article class="cred-card">
+          <div class="cred-icon">💼</div>
+          <h3>IBM IT Project Manager</h3>
+          <p class="cred-org">Agile &amp; Scrum Delivery</p>
+          <p>Directing technical teams, risk assessments, resource allocation, and delivering complex IT security projects on schedule.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Project / Specialization Grid -->
+    <section id="projects" class="container">
+      <h2 class="section-title">Core Competencies</h2>
+      <div class="project-grid">
+        
+        <article class="card">
+          <div class="card-tag">Cyber Defense</div>
+          <h3>Threat Intelligence Platform</h3>
+          <p>Automated SIEM logging pipeline integrating real-time threat feed aggregation, intrusion detection rules, and proactive vulnerability scanning.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Full Stack Development</div>
+          <h3>Enterprise Web Portal</h3>
+          <p>Custom secure web application featuring end-to-end data encryption, OAuth2 verification, and high-speed database transaction handling.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Interactive Terminal & Contact Form -->
     <section id="contact" class="container">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Your Name">
+      <h2 class="section-title">Secure Connection</h2>
+      <div class="contact-wrapper">
+        <form id="contact-form" class="styled-form">
+          <div class="input-group">
+            <label for="name">Identifier / Name:</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+          </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+          <div class="input-group">
+            <label for="email">Secure Address / Email:</label>
+            <input type="email" id="email" name="email" required placeholder="name@domain.com">
+          </div>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required placeholder="Your message..."></textarea>
+          <div class="input-group">
+            <label for="message">Transmission Message:</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Enter request details..."></textarea>
+          </div>
 
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-      <p id="form-status" aria-live="polite"></p>
+          <button type="submit" class="btn primary-btn">Transmit Message</button>
+          <p id="form-status" class="status-output" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Developer Portfolio. All rights reserved.</p>
+    <p>&copy; 2026 Secured Operations | All Systems Operational</p>
   </footer>
 
   <script src="script.js"></script>
