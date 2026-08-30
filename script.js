@@ -1,24 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Theme Toggle Interactivity
-  const toggleBtn = document.getElementById('theme-toggle');
+
+  // 1. Theme Toggle Mechanism
+  const themeToggleBtn = document.getElementById('theme-toggle');
   
-  toggleBtn.addEventListener('click', () => {
+  themeToggleBtn.addEventListener('click', () => {
     const currentTheme = document.body.getAttribute('data-theme');
+    
     if (currentTheme === 'dark') {
-      document.body.removeAttribute('data-theme');
+      document.body.setAttribute('data-theme', 'light');
+      themeToggleBtn.textContent = '☀️ Light Theme';
     } else {
       document.body.setAttribute('data-theme', 'dark');
+      themeToggleBtn.textContent = '🌙 Dark Theme';
     }
   });
 
-  // 2. Interactive Form Handling
-  const form = document.getElementById('contact-form');
-  const statusMsg = document.getElementById('form-status');
+  // 2. Interactive Contact Form Submission
+  const contactForm = document.getElementById('contact-form');
+  const statusOutput = document.getElementById('form-status');
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    statusMsg.style.color = 'green';
-    statusMsg.textContent = 'Thank you! Your message has been sent successfully.';
-    form.reset();
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    // Simulate transmission output
+    statusOutput.style.color = '#3fb950';
+    statusOutput.textContent = '[SUCCESS] Payload transmitted successfully. Verification log generated.';
+    
+    contactForm.reset();
   });
 });
