@@ -30,19 +30,20 @@
 <body class="bg-gray-950 text-gray-100 font-sans antialiased transition-colors duration-300">
 
     <!-- TOP NAVIGATION BAR -->
-    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80 border-b border-gray-800 transition-colors duration-300 header-bg">
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80 border-b transition-colors duration-300 header-bg">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="text-xl font-bold font-mono tracking-tight flex items-center gap-2 logo-text">
                 <span>&lt;</span><span>Mushahid.Ali</span><span>/&gt;</span>
             </a>
 
             <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium nav-links">
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium nav-links">
                 <a href="#about" class="transition">About</a>
-                <a href="#skills" class="transition">Skills & Expertise</a>
+                <a href="#skills" class="transition">Skills</a>
                 <a href="#specializations" class="transition">Specializations</a>
+                <a href="#project-management" class="transition">Project Management</a>
                 <a href="#certifications" class="transition">Certificates (77+)</a>
-                <a href="#terminal" class="transition">Interactive CLI</a>
+                <a href="#terminal" class="transition">Terminal</a>
                 <a href="#contact" class="transition">Contact</a>
             </nav>
 
@@ -81,7 +82,7 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 px-6 border-t border-gray-800 section-alt-bg">
+    <section id="about" class="py-24 px-6 border-t section-alt-bg">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
@@ -106,17 +107,17 @@
             </div>
             <!-- Personal Info Card -->
             <div class="p-8 rounded-2xl border card-bg shadow-xl">
-                <h3 class="text-xl font-bold mb-6 border-b border-gray-700 pb-4 accent-color font-mono">Personal Credentials</h3>
+                <h3 class="text-xl font-bold mb-6 border-b pb-4 accent-color font-mono">Personal Credentials</h3>
                 <ul class="space-y-4 text-sm">
-                    <li class="flex justify-between border-b border-gray-700/50 pb-2">
+                    <li class="flex justify-between border-b pb-2">
                         <span class="text-gray-400">Father's Name:</span>
                         <span class="font-medium">Syed Khadim Hussain Shah</span>
                     </li>
-                    <li class="flex justify-between border-b border-gray-700/50 pb-2">
+                    <li class="flex justify-between border-b pb-2">
                         <span class="text-gray-400">Date of Birth:</span>
                         <span class="font-medium">June 16, 2006</span>
                     </li>
-                    <li class="flex justify-between border-b border-gray-700/50 pb-2">
+                    <li class="flex justify-between border-b pb-2">
                         <span class="text-gray-400">Domicile / Region:</span>
                         <span class="font-medium">AJK, Pakistan (Garhi Dupatta, Muzaffarabad)</span>
                     </li>
@@ -130,7 +131,7 @@
     </section>
 
     <!-- CORE SKILLS & EXPERTISE -->
-    <section id="skills" class="py-24 px-6 border-t border-gray-800">
+    <section id="skills" class="py-24 px-6 border-t">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold mb-12 text-center">
                 <span class="accent-color font-mono text-xl">02.</span> Core Competencies & Skills
@@ -180,7 +181,7 @@
     </section>
 
     <!-- PROFESSIONAL SPECIALIZATIONS SECTION -->
-    <section id="specializations" class="py-24 px-6 border-t border-gray-800 section-alt-bg">
+    <section id="specializations" class="py-24 px-6 border-t section-alt-bg">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold mb-3">
                 <span class="accent-color font-mono text-xl">03.</span> Professional Specialization Certificates
@@ -191,10 +192,9 @@
                 <!-- Spec 1 -->
                 <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
-                            <!-- Placeholder for Certificate Image -->
-                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
                         </div>
                         <span class="text-xs font-mono accent-color">Infosec • October 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Cyber Incident Response Specialization</h4>
@@ -205,9 +205,9 @@
                 <!-- Spec 2 -->
                 <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
-                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
                         </div>
                         <span class="text-xs font-mono accent-color-cyan">Microsoft • September 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Full-Stack Developer Professional Certificate</h4>
@@ -218,9 +218,9 @@
                 <!-- Spec 3 -->
                 <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
-                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
                         </div>
                         <span class="text-xs font-mono text-blue-400">Google • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">IT Support Professional Certificate</h4>
@@ -231,9 +231,9 @@
                 <!-- Spec 4 -->
                 <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
-                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
                         </div>
                         <span class="text-xs font-mono accent-color">Edureka • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Cyber Threat Intelligence and Incident Response Specialization</h4>
@@ -244,9 +244,9 @@
                 <!-- Spec 5 -->
                 <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
-                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
                         </div>
                         <span class="text-xs font-mono text-purple-400">IBM • ISC2 • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Cybersecurity Specialist Professional Certificate</h4>
@@ -257,12 +257,77 @@
                 <!-- Spec 6 -->
                 <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
-                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono accent-color">IBM • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Cybersecurity Analyst Professional Certificate</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Spec 7 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
                         </div>
                         <span class="text-xs font-mono accent-color">Fortinet • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Network Security Specialization</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Spec 8 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono accent-color-cyan">Macquarie University • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Cyber Security Manager Certificate Specialization</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Spec 9 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono text-purple-400">Packt • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">CISA: Certified Information Systems Auditor Specialization</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Spec 10 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono text-blue-400">Packt • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">CRISC: Certified in Risk and Information Systems Control Specialization</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Spec 11 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-500 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono accent-color">STARWEAVER • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Essentials of Hospitality Management Specialization</h4>
                     </div>
                     <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
@@ -270,15 +335,70 @@
         </div>
     </section>
 
-    <!-- CERTIFICATIONS SHOWCASE -->
-    <section id="certifications" class="py-24 px-6 border-t border-gray-800">
+    <!-- PROJECT MANAGEMENT SECTION -->
+    <section id="project-management" class="py-24 px-6 border-t">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-3">
+                <span class="accent-color font-mono text-xl">04.</span> Project Management & Agile Methodologies
+            </h2>
+            <p class="text-gray-400 text-sm mb-12">Professional certifications and coursework in Project Management, CAPM, Scrum, and Leadership.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono accent-color">IBM & SkillUp • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">IBM IT Project Manager Professional Certificate</h4>
+                    </div>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check accent-color"></i> Verified Professional Certificate</span>
+                </div>
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono accent-color-cyan">Google • September 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Project Planning: Putting It All Together</h4>
+                    </div>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check accent-color-cyan"></i> Verified Course</span>
+                </div>
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-blue-400">Google • October 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Project Execution: Running the Project</h4>
+                    </div>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check text-blue-400"></i> Verified Course</span>
+                </div>
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono accent-color">SkillUp • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Practice Exam for CAPM Certification</h4>
+                    </div>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check accent-color"></i> Verified Course</span>
+                </div>
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono accent-color-cyan">SkillUp • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Introduction to Scrum Master Profession</h4>
+                    </div>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check accent-color-cyan"></i> Verified Course</span>
+                </div>
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-purple-400">IBM • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Introduction to Agile Development and Scrum</h4>
+                    </div>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check text-purple-400"></i> Verified Course</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALL CERTIFICATIONS ARCHIVE -->
+    <section id="certifications" class="py-24 px-6 border-t section-alt-bg">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center mb-12">
                 <div>
                     <h2 class="text-3xl font-bold mb-2">
-                        <span class="accent-color font-mono text-xl">04.</span> All Certifications Archive
+                        <span class="accent-color font-mono text-xl">05.</span> All Certifications Archive (77+)
                     </h2>
-                    <p class="text-gray-400 text-sm">Over 77+ verified certifications completed from top-tier institutions.</p>
+                    <p class="text-gray-400 text-sm">Comprehensive listing of all earned certificates categorized by domain.</p>
                 </div>
                 <div class="mt-4 md:mt-0 flex gap-2">
                     <button onclick="filterCerts('all')" class="px-4 py-2 rounded-lg primary-cta-btn text-xs font-semibold">All (77)</button>
@@ -336,12 +456,12 @@
     </section>
 
     <!-- INTERACTIVE TERMINAL -->
-    <section id="terminal" class="py-24 px-6 border-t border-gray-800 section-alt-bg">
+    <section id="terminal" class="py-24 px-6 border-t">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center">
-                <span class="accent-color font-mono text-xl">05.</span> Interactive Terminal CLI
+                <span class="accent-color font-mono text-xl">06.</span> Interactive Terminal CLI
             </h2>
-            <p class="text-gray-400 text-center text-sm mb-8">Type commands below like <code class="accent-color">help</code>, <code class="accent-color">skills</code>, <code class="accent-color">contact</code>, or <code class="accent-color">clear</code>.</p>
+            <p class="text-gray-400 text-center text-sm mb-8">Type commands below like <code class="accent-color">help</code>, <code class="accent-color">skills</code>, <code class="accent-color">pm</code>, <code class="accent-color">contact</code>, or <code class="accent-color">clear</code>.</p>
             
             <div class="terminal-box rounded-2xl shadow-2xl overflow-hidden font-mono text-sm border">
                 <div class="terminal-header px-4 py-3 border-b flex items-center justify-between">
@@ -365,19 +485,19 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="py-24 px-6 border-t border-gray-800">
+    <section id="contact" class="py-24 px-6 border-t section-alt-bg">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-6">
-                <span class="accent-color font-mono text-xl">06.</span> Let's Work Together
+                <span class="accent-color font-mono text-xl">07.</span> Let's Work Together
             </h2>
             <p class="text-gray-400 mb-10">Looking for an IT Support Specialist, Cybersecurity Analyst, or Developer? Get in touch with me directly.</p>
             
             <div class="flex flex-wrap justify-center gap-6 mb-12">
-                <a href="mailto:mushahid.ssaak7610@gmail.com" class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg hover:border-emerald-500 transition">
+                <a href="mailto:mushahid.ssaak7610@gmail.com" class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg transition hover:shadow-md">
                     <i class="fa-solid fa-envelope accent-color text-xl"></i>
                     <span class="text-sm font-medium">mushahid.ssaak7610@gmail.com</span>
                 </a>
-                <a href="tel:+923408825529" class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg hover:border-emerald-500 transition">
+                <a href="tel:+923408825529" class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg transition hover:shadow-md">
                     <i class="fa-solid fa-phone accent-color-cyan text-xl"></i>
                     <span class="text-sm font-medium">+92 340 8825529</span>
                 </a>
@@ -390,7 +510,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-8 text-center border-t border-gray-800 text-xs text-gray-500 font-mono">
+    <footer class="py-8 text-center border-t text-xs text-gray-500 font-mono">
         &copy; 2026 Mushahid Ali Kazmi. Built with modern web technologies.
     </footer>
 
