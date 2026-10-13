@@ -1,33 +1,36 @@
-/* LIGHT MODE THEME (Professional White & Indigo/Royal Blue) */
+/* LIGHT MODE THEME (Crisp Slate, Deep Charcoal Text & Blue Accent) */
 :root {
-    --bg-primary: #ffffff;
-    --bg-alt: #f8fafc;
+    --bg-primary: #f8fafc;
+    --bg-alt: #ffffff;
     --text-primary: #0f172a;
     --text-secondary: #475569;
-    --accent: #4f46e5; /* Indigo Blue */
-    --accent-cyan: #0284c7; /* Sky Blue accent */
+    --accent: #0284c7; /* Sky Blue */
+    --accent-cyan: #2563eb; /* Royal Blue */
     --card-bg: #ffffff;
-    --border-color: #e2e8f0;
-    --header-bg: rgba(255, 255, 255, 0.90);
+    --border-color: #cbd5e1;
+    --header-bg: rgba(248, 250, 252, 0.90);
 }
 
-/* DARK MODE THEME (Dark & Green) */
+/* DARK MODE THEME (Sleek Dark Slate & Neon Emerald) */
 html.dark {
-    --bg-primary: #030712;
-    --bg-alt: #0b0f19;
-    --text-primary: #f3f4f6;
-    --text-secondary: #9ca3af;
-    --accent: #10b981; /* Green */
+    --bg-primary: #090d16;
+    --bg-alt: #0f172a;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #10b981; /* Emerald Green */
     --accent-cyan: #06b6d4; /* Cyan */
-    --card-bg: #0f172a;
-    --border-color: #1e293b;
-    --header-bg: rgba(3, 7, 18, 0.90);
+    --card-bg: #1e293b;
+    --border-color: #334155;
+    --header-bg: rgba(9, 13, 22, 0.90);
 }
 
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
 }
+
+.text-main { color: var(--text-primary); }
+.text-subtext { color: var(--text-secondary); }
 
 .header-bg { background-color: var(--header-bg); border-color: var(--border-color); }
 .section-alt-bg { background-color: var(--bg-alt); }
@@ -63,21 +66,10 @@ body {
 .theme-btn {
     background-color: var(--card-bg);
     border-color: var(--border-color);
-    color: var(--text-secondary);
+    color: var(--text-primary);
 }
 .theme-btn:hover {
-    color: var(--text-primary);
     border-color: var(--accent);
-}
-
-.filter-btn {
-    background-color: var(--card-bg);
-    border-color: var(--border-color);
-    color: var(--text-secondary);
-}
-.filter-btn:hover {
-    border-color: var(--accent);
-    color: var(--text-primary);
 }
 
 .terminal-box {
@@ -95,5 +87,5 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--bg-alt); }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
