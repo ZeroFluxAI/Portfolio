@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mushahid Ali Kazmi | IT Support, Cybersecurity & Full-Stack Engineer</title>
+    <title>Mushahid Ali Kazmi | Elite Cybersecurity Analyst & Software Architect</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     
@@ -27,29 +27,34 @@
         }
     </script>
 </head>
-<body class="font-sans antialiased transition-colors duration-300">
+<body class="font-sans antialiased transition-colors duration-500 overflow-x-hidden">
+
+    <!-- AMBIENT BACKGROUND GLOW EFFECTS -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <!-- TOP NAVIGATION BAR -->
     <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 header-bg">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold font-mono tracking-tight flex items-center gap-2 logo-text">
-                <span>&lt;</span><span>Mushahid.Ali</span><span>/&gt;</span>
+            <a href="#" class="text-xl font-bold font-mono tracking-tight flex items-center gap-2 logo-text group">
+                <span class="group-hover:rotate-12 transition-transform">&lt;</span>
+                <span>Mushahid.Ali</span>
+                <span class="group-hover:-rotate-12 transition-transform">/&gt;</span>
             </a>
 
             <!-- Navigation Links -->
             <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold nav-links">
-                <a href="#about" class="transition">About</a>
-                <a href="#skills" class="transition">Skills</a>
-                <a href="#specializations" class="transition">Specializations</a>
-                <a href="#advanced-courses" class="transition">Advanced Credentials</a>
-                <a href="#project-management" class="transition">PM & Governance</a>
-                <a href="#terminal" class="transition">CLI Terminal</a>
-                <a href="#contact" class="transition">Contact</a>
+                <a href="#about" class="transition hover:text-emerald-400">About</a>
+                <a href="#skills" class="transition hover:text-emerald-400">Expertise</a>
+                <a href="#specializations" class="transition hover:text-emerald-400">Specializations</a>
+                <a href="#advanced-courses" class="transition hover:text-emerald-400">Certifications</a>
+                <a href="#terminal" class="transition hover:text-emerald-400">CLI Console</a>
+                <a href="#contact" class="transition hover:text-emerald-400">Contact</a>
             </nav>
 
-            <!-- Light/Dark Mode Toggle -->
+            <!-- Theme Toggle -->
             <div>
-                <button onclick="toggleTheme()" class="px-4 py-2 rounded-xl border theme-btn transition flex items-center gap-2 text-xs font-mono font-semibold">
+                <button onclick="toggleTheme()" class="px-4 py-2 rounded-xl border theme-btn transition flex items-center gap-2 text-xs font-mono font-bold shadow-sm">
                     <i id="themeIcon" class="fa-solid fa-moon"></i>
                     <span id="themeText">Dark Mode</span>
                 </button>
@@ -58,23 +63,24 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="min-h-screen flex items-center justify-center pt-24 px-6 relative overflow-hidden">
-        <div class="max-w-5xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full badge-box text-xs font-mono mb-6 shadow-sm">
-                <span class="w-2.5 h-2.5 rounded-full badge-dot animate-pulse"></span>
-                Available for Senior IT & Cybersecurity Roles
+    <section class="min-h-screen flex items-center justify-center pt-24 px-6 relative">
+        <div class="max-w-5xl mx-auto text-center relative z-10 animate-fade-in">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full badge-box text-xs font-mono mb-6 shadow-md border">
+                <span class="w-2.5 h-2.5 rounded-full badge-dot animate-ping"></span>
+                Top-Tier Cybersecurity Specialist & Systems Architect
             </div>
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-                Hi, I'm <span class="hero-title-gradient bg-clip-text text-transparent">Mushahid Ali Kazmi</span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-tight">
+                Engineering Secure Systems.<br>
+                <span class="hero-title-gradient bg-clip-text text-transparent">Unstoppable Execution.</span>
             </h1>
             <p class="text-lg sm:text-xl text-subtext max-w-3xl mx-auto mb-10 font-mono">
-                Cybersecurity Analyst | Network Security Administrator | Full-Stack .NET Developer
+                Cybersecurity Analyst | Enterprise Firewall Administrator | Full-Stack .NET Engineer
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#specializations" class="px-8 py-3.5 rounded-xl font-semibold primary-cta-btn transition shadow-lg">
+                <a href="#specializations" class="px-8 py-4 rounded-xl font-bold primary-cta-btn transition shadow-xl hover:scale-105">
                     Explore Specializations
                 </a>
-                <a href="#contact" class="px-8 py-3.5 rounded-xl font-semibold secondary-cta-btn transition">
+                <a href="#contact" class="px-8 py-4 rounded-xl font-bold secondary-cta-btn transition hover:scale-105">
                     Get in Touch
                 </a>
             </div>
@@ -82,43 +88,46 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 px-6 border-t section-alt-bg">
+    <section id="about" class="py-24 px-6 border-t section-alt-bg relative">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-extrabold flex items-center gap-3">
                     <span class="accent-color font-mono text-xl">01.</span> Executive Profile
                 </h2>
-                <p class="text-main leading-relaxed mb-4">
-                    Highly accomplished IT Security Specialist and Software Engineer with expert command over <strong class="accent-color">network security administration, cyber threat management, incident response, and enterprise system architecture</strong>. Certified in Fortinet, Cisco, ISC2, Microsoft, and IBM enterprise programs.
+                <p class="text-main leading-relaxed text-base">
+                    Elite IT professional commanding advanced expertise in <strong class="accent-color">cyber threat hunting, enterprise firewall architecture, digital forensics, and secure software engineering</strong>. Backed by an unstoppable collection of high-level certifications from global tech giants including Fortinet, Cisco, IBM, Microsoft, and ISC2.
                 </p>
-                <p class="text-main leading-relaxed mb-6">
-                    Currently pursuing a <strong class="accent-color-cyan">Bachelor of Science in Computer Science (BSCS)</strong> at Virtual University of Pakistan, backed by a rigorous portfolio of specialized technical credentials in security auditing, firewall administration, and full-stack software development.
+                <p class="text-main leading-relaxed text-base">
+                    Currently advancing technical mastery through a <strong class="accent-color-cyan">Bachelor of Science in Computer Science (BSCS)</strong> at Virtual University of Pakistan, proving relentless dedication to digital defense and infrastructure perfection.
                 </p>
-                <div class="grid grid-cols-2 gap-4 font-mono text-sm">
-                    <div class="p-4 rounded-xl border card-bg shadow-sm">
-                        <span class="accent-color block font-bold text-xl">Advanced</span>
-                        Security Engineer
+                <div class="grid grid-cols-2 gap-4 font-mono text-sm pt-2">
+                    <div class="p-4 rounded-xl border card-bg shadow-lg transform hover:-translate-y-1 transition">
+                        <span class="accent-color block font-bold text-2xl">Elite</span>
+                        Cyber Security Expert
                     </div>
-                    <div class="p-4 rounded-xl border card-bg shadow-sm">
-                        <span class="accent-color-cyan block font-bold text-xl">BSCS</span>
+                    <div class="p-4 rounded-xl border card-bg shadow-lg transform hover:-translate-y-1 transition">
+                        <span class="accent-color-cyan block font-bold text-2xl">BSCS</span>
                         Virtual University
                     </div>
                 </div>
             </div>
 
-            <!-- Personal Credentials Card -->
-            <div class="p-8 rounded-2xl border card-bg shadow-xl">
-                <h3 class="text-xl font-bold mb-6 border-b pb-4 accent-color font-mono">Verified Credentials</h3>
+            <!-- Credentials Card -->
+            <div class="p-8 rounded-2xl border card-bg shadow-2xl relative overflow-hidden group">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 transition"></div>
+                <h3 class="text-xl font-bold mb-6 border-b pb-4 accent-color font-mono flex items-center gap-2">
+                    <i class="fa-solid fa-id-badge"></i> Verified Identity
+                </h3>
                 <ul class="space-y-4 text-sm font-medium">
-                    <li class="flex justify-between border-b pb-2">
-                        <span class="text-subtext">Father's Name:</span>
-                        <span class="text-main">Syed Khadim Hussain Shah</span>
+                    <li class="flex justify-between border-b pb-3">
+                        <span class="text-subtext">Full Name:</span>
+                        <span class="text-main font-bold">Mushahid Ali Kazmi</span>
                     </li>
-                    <li class="flex justify-between border-b pb-2">
+                    <li class="flex justify-between border-b pb-3">
                         <span class="text-subtext">Date of Birth:</span>
                         <span class="text-main">June 16, 2006</span>
                     </li>
-                    <li class="flex justify-between border-b pb-2">
+                    <li class="flex justify-between border-b pb-3">
                         <span class="text-subtext">Domicile / Region:</span>
                         <span class="text-main">AJK, Pakistan (Garhi Dupatta, Muzaffarabad)</span>
                     </li>
@@ -131,50 +140,50 @@
         </div>
     </section>
 
-    <!-- CORE COMPETENCIES & SKILLS -->
-    <section id="skills" class="py-24 px-6 border-t">
+    <!-- CORE COMPETENCIES & EXPERTISE -->
+    <section id="skills" class="py-24 px-6 border-t relative">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center">
-                <span class="accent-color font-mono text-xl">02.</span> Core Technical Domains
+            <h2 class="text-3xl font-extrabold mb-12 text-center">
+                <span class="accent-color font-mono text-xl">02.</span> Elite Technical Domains
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl border card-bg shadow-md">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 accent-color flex items-center justify-center text-xl mb-6">
+                <div class="p-8 rounded-2xl border card-bg shadow-xl transform hover:-translate-y-2 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 accent-color flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-shield-halved"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Cybersecurity & Incident Response</h3>
-                    <ul class="space-y-2.5 text-sm text-subtext">
-                        <li>• Threat Hunting & Incident Mitigation</li>
-                        <li>• Digital Forensics & Threat Intelligence</li>
-                        <li>• Penetration Testing & Cryptography</li>
-                        <li>• Vulnerability Management</li>
-                        <li>• Security Operations (SecOps)</li>
+                    <h3 class="text-xl font-bold mb-4">Cyber Threat Defense</h3>
+                    <ul class="space-y-3 text-sm text-subtext">
+                        <li>• Incident Response & Digital Forensics</li>
+                        <li>• Penetration Testing & Threat Hunting</li>
+                        <li>• Vulnerability Assessment & Management</li>
+                        <li>• Security Operations (SecOps & SIEM)</li>
+                        <li>• Cryptographic Protection Protocols</li>
                     </ul>
                 </div>
-                <div class="p-8 rounded-2xl border card-bg shadow-md">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 accent-color-cyan flex items-center justify-center text-xl mb-6">
+                <div class="p-8 rounded-2xl border card-bg shadow-xl transform hover:-translate-y-2 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 accent-color-cyan flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-network-wired"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Network & Firewall Administration</h3>
-                    <ul class="space-y-2.5 text-sm text-subtext">
-                        <li>• FortiGate Enterprise Firewall Admin</li>
-                        <li>• FortiManager & FortiAnalyzer Systems</li>
-                        <li>• TCP/IP, Switching & Router Protocols</li>
-                        <li>• Network Architecture & Security Support</li>
-                        <li>• Access Control & System Resiliency</li>
+                    <h3 class="text-xl font-bold mb-4">Network & Firewalls</h3>
+                    <ul class="space-y-3 text-sm text-subtext">
+                        <li>• FortiGate Enterprise Administration</li>
+                        <li>• FortiManager & FortiAnalyzer Deployments</li>
+                        <li>• TCP/IP, Router & Switch Engineering</li>
+                        <li>• Network Security Support Engineering</li>
+                        <li>• Enterprise Access Control Architecture</li>
                     </ul>
                 </div>
-                <div class="p-8 rounded-2xl border card-bg shadow-md">
-                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-6">
+                <div class="p-8 rounded-2xl border card-bg shadow-xl transform hover:-translate-y-2 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-code"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Full-Stack Development & DevOps</h3>
-                    <ul class="space-y-2.5 text-sm text-subtext">
-                        <li>• Back-End Development with C# & .NET</li>
+                    <h3 class="text-xl font-bold mb-4">Software Architecture</h3>
+                    <ul class="space-y-3 text-sm text-subtext">
+                        <li>• Full-Stack Development with C# & .NET</li>
                         <li>• Blazor Front-End Engineering</li>
                         <li>• Database Integration & Management</li>
-                        <li>• System Architecture & Deployment</li>
-                        <li>• Data Structures & Algorithms</li>
+                        <li>• Data Structures & Algorithm Optimization</li>
+                        <li>• DevOps, Deployment & Maintenance</li>
                     </ul>
                 </div>
             </div>
@@ -184,99 +193,94 @@
     <!-- PROFESSIONAL SPECIALIZATIONS SECTION -->
     <section id="specializations" class="py-24 px-6 border-t section-alt-bg">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-3">
-                <span class="accent-color font-mono text-xl">03.</span> Professional Specializations
+            <h2 class="text-3xl font-extrabold mb-3">
+                <span class="accent-color font-mono text-xl">03.</span> Master Specializations
             </h2>
-            <p class="text-subtext text-sm mb-12">High-level multi-course professional specialization programs.</p>
+            <p class="text-subtext text-sm mb-12">Elite multi-course professional certifications from world-class institutions.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Specialization 1 -->
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <!-- Spec Cards -->
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/40 border mb-4 overflow-hidden flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('Cyber Incident Response Specialization', 'Infosec', 'October 2026')">
-                            <i class="fa-solid fa-certificate text-4xl accent-color group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-white">Click to Preview</span>
+                        <div class="h-36 rounded-xl bg-gray-800/40 border mb-4 flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('Cyber Incident Response Specialization', 'Infosec', 'October 2026')">
+                            <i class="fa-solid fa-award text-4xl accent-color group-hover:scale-125 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/70 text-white border border-gray-700">Preview</span>
                         </div>
-                        <span class="text-xs font-mono accent-color">Infosec • October 2026</span>
+                        <span class="text-xs font-mono accent-color font-bold">Infosec • October 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Cyber Incident Response Specialization</h4>
                     </div>
-                    <button onclick="openCertModal('Cyber Incident Response Specialization', 'Infosec', 'October 2026')" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
-                        View Certificate Preview <i class="fa-solid fa-eye"></i>
+                    <button onclick="openCertModal('Cyber Incident Response Specialization', 'Infosec', 'October 2026')" class="text-xs font-bold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
+                        View Credential Preview <i class="fa-solid fa-eye"></i>
                     </button>
                 </div>
 
-                <!-- Specialization 2 -->
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/40 border mb-4 overflow-hidden flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('Microsoft Full-Stack Developer Professional Certificate', 'Microsoft', 'September 2026')">
-                            <i class="fa-solid fa-certificate text-4xl accent-color-cyan group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-white">Click to Preview</span>
+                        <div class="h-36 rounded-xl bg-gray-800/40 border mb-4 flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('Microsoft Full-Stack Developer Professional Certificate', 'Microsoft', 'September 2026')">
+                            <i class="fa-solid fa-award text-4xl accent-color-cyan group-hover:scale-125 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/70 text-white border border-gray-700">Preview</span>
                         </div>
-                        <span class="text-xs font-mono accent-color-cyan">Microsoft • September 2026</span>
+                        <span class="text-xs font-mono accent-color-cyan font-bold">Microsoft • September 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Microsoft Full-Stack Developer Professional Certificate</h4>
                     </div>
-                    <button onclick="openCertModal('Microsoft Full-Stack Developer Professional Certificate', 'Microsoft', 'September 2026')" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
-                        View Certificate Preview <i class="fa-solid fa-eye"></i>
+                    <button onclick="openCertModal('Microsoft Full-Stack Developer Professional Certificate', 'Microsoft', 'September 2026')" class="text-xs font-bold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
+                        View Credential Preview <i class="fa-solid fa-eye"></i>
                     </button>
                 </div>
 
-                <!-- Specialization 3 -->
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/40 border mb-4 overflow-hidden flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('Cyber Threat Intelligence and Incident Response', 'Edureka', 'August 2026')">
-                            <i class="fa-solid fa-certificate text-4xl accent-color group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-white">Click to Preview</span>
+                        <div class="h-36 rounded-xl bg-gray-800/40 border mb-4 flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('Cyber Threat Intelligence and Incident Response', 'Edureka', 'August 2026')">
+                            <i class="fa-solid fa-award text-4xl accent-color group-hover:scale-125 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/70 text-white border border-gray-700">Preview</span>
                         </div>
-                        <span class="text-xs font-mono accent-color">Edureka • August 2026</span>
+                        <span class="text-xs font-mono accent-color font-bold">Edureka • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Cyber Threat Intelligence & Incident Response</h4>
                     </div>
-                    <button onclick="openCertModal('Cyber Threat Intelligence and Incident Response', 'Edureka', 'August 2026')" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
-                        View Certificate Preview <i class="fa-solid fa-eye"></i>
+                    <button onclick="openCertModal('Cyber Threat Intelligence and Incident Response', 'Edureka', 'August 2026')" class="text-xs font-bold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
+                        View Credential Preview <i class="fa-solid fa-eye"></i>
                     </button>
                 </div>
 
-                <!-- Specialization 4 -->
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/40 border mb-4 overflow-hidden flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('Cybersecurity Specialist Professional Certificate', 'IBM & ISC2', 'August 2026')">
-                            <i class="fa-solid fa-certificate text-4xl text-purple-400 group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-white">Click to Preview</span>
+                        <div class="h-36 rounded-xl bg-gray-800/40 border mb-4 flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('Cybersecurity Specialist Professional Certificate', 'IBM & ISC2', 'August 2026')">
+                            <i class="fa-solid fa-award text-4xl text-purple-400 group-hover:scale-125 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/70 text-white border border-gray-700">Preview</span>
                         </div>
-                        <span class="text-xs font-mono text-purple-400">IBM • ISC2 • August 2026</span>
+                        <span class="text-xs font-mono text-purple-400 font-bold">IBM • ISC2 • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">IBM & ISC2 Cybersecurity Specialist</h4>
                     </div>
-                    <button onclick="openCertModal('Cybersecurity Specialist Professional Certificate', 'IBM & ISC2', 'August 2026')" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
-                        View Certificate Preview <i class="fa-solid fa-eye"></i>
+                    <button onclick="openCertModal('Cybersecurity Specialist Professional Certificate', 'IBM & ISC2', 'August 2026')" class="text-xs font-bold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
+                        View Credential Preview <i class="fa-solid fa-eye"></i>
                     </button>
                 </div>
 
-                <!-- Specialization 5 -->
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/40 border mb-4 overflow-hidden flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('Fortinet Network Security Specialization', 'Fortinet, Inc.', 'August 2026')">
-                            <i class="fa-solid fa-certificate text-4xl accent-color-cyan group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-white">Click to Preview</span>
+                        <div class="h-36 rounded-xl bg-gray-800/40 border mb-4 flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('Fortinet Network Security Specialization', 'Fortinet, Inc.', 'August 2026')">
+                            <i class="fa-solid fa-award text-4xl accent-color-cyan group-hover:scale-125 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/70 text-white border border-gray-700">Preview</span>
                         </div>
-                        <span class="text-xs font-mono accent-color-cyan">Fortinet, Inc. • August 2026</span>
+                        <span class="text-xs font-mono accent-color-cyan font-bold">Fortinet, Inc. • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Fortinet Network Security Specialization</h4>
                     </div>
-                    <button onclick="openCertModal('Fortinet Network Security Specialization', 'Fortinet, Inc.', 'August 2026')" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
-                        View Certificate Preview <i class="fa-solid fa-eye"></i>
+                    <button onclick="openCertModal('Fortinet Network Security Specialization', 'Fortinet, Inc.', 'August 2026')" class="text-xs font-bold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
+                        View Credential Preview <i class="fa-solid fa-eye"></i>
                     </button>
                 </div>
 
-                <!-- Specialization 6 -->
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <div class="h-36 rounded-lg bg-gray-800/40 border mb-4 overflow-hidden flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('CISA: Certified Information Systems Auditor', 'Packt', 'August 2026')">
-                            <i class="fa-solid fa-certificate text-4xl accent-color group-hover:scale-110 transition"></i>
-                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-white">Click to Preview</span>
+                        <div class="h-36 rounded-xl bg-gray-800/40 border mb-4 flex items-center justify-center relative group cursor-pointer" onclick="openCertModal('CISA: Certified Information Systems Auditor', 'Packt', 'August 2026')">
+                            <i class="fa-solid fa-award text-4xl accent-color group-hover:scale-125 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/70 text-white border border-gray-700">Preview</span>
                         </div>
-                        <span class="text-xs font-mono accent-color">Packt • August 2026</span>
+                        <span class="text-xs font-mono accent-color font-bold">Packt • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">CISA: Information Systems Auditor Specialization</h4>
                     </div>
-                    <button onclick="openCertModal('CISA: Certified Information Systems Auditor', 'Packt', 'August 2026')" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
-                        View Certificate Preview <i class="fa-solid fa-eye"></i>
+                    <button onclick="openCertModal('CISA: Certified Information Systems Auditor', 'Packt', 'August 2026')" class="text-xs font-bold mt-4 inline-flex items-center gap-1 accent-color hover:underline text-left">
+                        View Credential Preview <i class="fa-solid fa-eye"></i>
                     </button>
                 </div>
             </div>
@@ -286,202 +290,195 @@
     <!-- ADVANCED TECHNICAL COURSES SECTION -->
     <section id="advanced-courses" class="py-24 px-6 border-t">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-3">
-                <span class="accent-color font-mono text-xl">04.</span> Advanced Technical Credentials
+            <h2 class="text-3xl font-extrabold mb-3">
+                <span class="accent-color font-mono text-xl">04.</span> Advanced Engineering & Security Courses
             </h2>
-            <p class="text-subtext text-sm mb-12">Rigorous engineering, security auditing, firewall administration, and enterprise credentials.</p>
+            <p class="text-subtext text-sm mb-12">High-level technical modules and enterprise security credentials.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Course Card -->
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono accent-color">Fortinet • August 2026</span>
+                        <span class="text-xs font-mono accent-color font-bold">Fortinet • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Enterprise Firewall Administrator</h4>
-                        <p class="text-xs text-subtext">Advanced FortiGate enterprise policy engineering & threat prevention.</p>
+                        <p class="text-xs text-subtext mt-1">Advanced FortiGate enterprise policy engineering, deep packet inspection & threat prevention.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 accent-color"><i class="fa-solid fa-shield"></i> Advanced Professional</span>
+                    <span class="text-xs font-bold mt-4 accent-color"><i class="fa-solid fa-shield"></i> Advanced Professional</span>
                 </div>
 
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono accent-color">Fortinet • August 2026</span>
+                        <span class="text-xs font-mono accent-color font-bold">Fortinet • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">FortiGate Administrator</h4>
-                        <p class="text-xs text-subtext">Configuration & management of FortiGate UTM security appliances.</p>
+                        <p class="text-xs text-subtext mt-1">Configuration & management of FortiGate UTM security appliances in high-availability networks.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 accent-color"><i class="fa-solid fa-shield"></i> Advanced Professional</span>
+                    <span class="text-xs font-bold mt-4 accent-color"><i class="fa-solid fa-shield"></i> Advanced Professional</span>
                 </div>
 
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono accent-color">Fortinet • August 2026</span>
+                        <span class="text-xs font-mono accent-color font-bold">Fortinet • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">FortiManager Administrator</h4>
-                        <p class="text-xs text-subtext">Centralized management of enterprise security deployment.</p>
+                        <p class="text-xs text-subtext mt-1">Centralized management of multi-device enterprise security deployment & policy provisioning.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 accent-color"><i class="fa-solid fa-shield"></i> Advanced Professional</span>
+                    <span class="text-xs font-bold mt-4 accent-color"><i class="fa-solid fa-shield"></i> Advanced Professional</span>
                 </div>
 
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono text-purple-400">Packt • August 2026</span>
+                        <span class="text-xs font-mono text-purple-400 font-bold">Packt • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Information Systems Auditing & Governance</h4>
-                        <p class="text-xs text-subtext">Auditing frameworks, IT governance controls & risk management.</p>
+                        <p class="text-xs text-subtext mt-1">Enterprise auditing frameworks, IT governance controls & risk management compliance.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 text-purple-400"><i class="fa-solid fa-award"></i> Audit & Governance</span>
+                    <span class="text-xs font-bold mt-4 text-purple-400"><i class="fa-solid fa-award"></i> Audit & Governance</span>
                 </div>
 
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono text-purple-400">Packt • August 2026</span>
+                        <span class="text-xs font-mono text-purple-400 font-bold">Packt • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Governance & Management of IT</h4>
-                        <p class="text-xs text-subtext">Aligning IT strategy with corporate compliance & governance.</p>
+                        <p class="text-xs text-subtext mt-1">Aligning IT strategy with corporate compliance, asset protection & executive oversight.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 text-purple-400"><i class="fa-solid fa-award"></i> Audit & Governance</span>
+                    <span class="text-xs font-bold mt-4 text-purple-400"><i class="fa-solid fa-award"></i> Audit & Governance</span>
                 </div>
 
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono accent-color-cyan">IBM • August 2026</span>
+                        <span class="text-xs font-mono accent-color-cyan font-bold">IBM • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Penetration Testing, Threat Hunting & Cryptography</h4>
-                        <p class="text-xs text-subtext">Offensive security operations, hunting tactics & cryptographic protection.</p>
+                        <p class="text-xs text-subtext mt-1">Offensive security operations, hunting tactics & robust cryptographic data protection.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 accent-color-cyan"><i class="fa-solid fa-bug"></i> Offensive Security</span>
+                    <span class="text-xs font-bold mt-4 accent-color-cyan"><i class="fa-solid fa-bug"></i> Offensive Security</span>
                 </div>
 
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono accent-color-cyan">IBM • August 2026</span>
+                        <span class="text-xs font-mono accent-color-cyan font-bold">IBM • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Cybersecurity Compliance Framework & Regulations</h4>
-                        <p class="text-xs text-subtext">NIST, ISO 27001, GDPR, and regulatory compliance standards.</p>
+                        <p class="text-xs text-subtext mt-1">NIST, ISO 27001, GDPR, and rigorous international regulatory compliance standards.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 accent-color-cyan"><i class="fa-solid fa-scale-balanced"></i> Compliance</span>
+                    <span class="text-xs font-bold mt-4 accent-color-cyan"><i class="fa-solid fa-scale-balanced"></i> Compliance</span>
                 </div>
 
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono text-blue-400">Microsoft • August 2026</span>
+                        <span class="text-xs font-mono text-blue-400 font-bold">Microsoft • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Back-End Development with .NET</h4>
-                        <p class="text-xs text-subtext">Scalable server-side C# architecture & web APIs.</p>
+                        <p class="text-xs text-subtext mt-1">Scalable server-side C# enterprise architecture, microservices & robust web APIs.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 text-blue-400"><i class="fa-solid fa-code"></i> Engineering</span>
+                    <span class="text-xs font-bold mt-4 text-blue-400"><i class="fa-solid fa-code"></i> Engineering</span>
                 </div>
 
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono text-blue-400">Microsoft • August 2026</span>
+                        <span class="text-xs font-mono text-blue-400 font-bold">Microsoft • August 2026</span>
                         <h4 class="font-bold text-lg mt-2 mb-2">Data Structures & Algorithms</h4>
-                        <p class="text-xs text-subtext">Algorithm optimization, complexity analysis & problem solving.</p>
+                        <p class="text-xs text-subtext mt-1">Advanced algorithm optimization, complexity analysis & high-performance problem solving.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 text-blue-400"><i class="fa-solid fa-microchip"></i> CS Core</span>
+                    <span class="text-xs font-bold mt-4 text-blue-400"><i class="fa-solid fa-microchip"></i> CS Core</span>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- PROJECT MANAGEMENT & GOVERNANCE SECTION -->
-    <section id="project-management" class="py-24 px-6 border-t section-alt-bg">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-3">
-                <span class="accent-color font-mono text-xl">05.</span> Project Management & IT Leadership
-            </h2>
-            <p class="text-subtext text-sm mb-12">Professional certifications in IT leadership, CAPM certification, and Agile frameworks.</p>
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
+                    <div>
+                        <span class="text-xs font-mono accent-color font-bold">IBM • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Cybersecurity Assessment: CompTIA Security+ & CYSA+</h4>
+                        <p class="text-xs text-subtext mt-1">Comprehensive threat analysis, vulnerability scanning & advanced security posture assessment.</p>
+                    </div>
+                    <span class="text-xs font-bold mt-4 accent-color"><i class="fa-solid fa-shield-cat"></i> CompTIA Aligned</span>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono accent-color">IBM & SkillUp • August 2026</span>
-                        <h4 class="font-bold text-lg mt-2 mb-2">IBM IT Project Manager Professional Certificate</h4>
+                        <span class="text-xs font-mono accent-color-cyan font-bold">IBM • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Incident Response and Digital Forensics</h4>
+                        <p class="text-xs text-subtext mt-1">Forensic data acquisition, volatile memory analysis & enterprise breach containment.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 accent-color"><i class="fa-solid fa-circle-check"></i> Professional Certificate</span>
+                    <span class="text-xs font-bold mt-4 accent-color-cyan"><i class="fa-solid fa-magnifying-glass-arrow-right"></i> Forensics</span>
                 </div>
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
+
+                <div class="p-6 rounded-2xl border card-bg flex flex-col justify-between shadow-lg transform hover:-translate-y-1 transition">
                     <div>
-                        <span class="text-xs font-mono accent-color-cyan">Google • September 2026</span>
-                        <h4 class="font-bold text-lg mt-2 mb-2">Project Planning: Putting It All Together</h4>
+                        <span class="text-xs font-mono text-blue-400 font-bold">Microsoft • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Database Integration and Management</h4>
+                        <p class="text-xs text-subtext mt-1">Relational database design, query optimization, indexing & secure data persistence.</p>
                     </div>
-                    <span class="text-xs font-medium mt-4 accent-color-cyan"><i class="fa-solid fa-circle-check"></i> Verified Credential</span>
-                </div>
-                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between shadow-sm">
-                    <div>
-                        <span class="text-xs font-mono text-purple-400">Google • October 2026</span>
-                        <h4 class="font-bold text-lg mt-2 mb-2">Project Execution: Running the Project</h4>
-                    </div>
-                    <span class="text-xs font-medium mt-4 text-purple-400"><i class="fa-solid fa-circle-check"></i> Verified Credential</span>
+                    <span class="text-xs font-bold mt-4 text-blue-400"><i class="fa-solid fa-database"></i> Database Arch</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- INTERACTIVE TERMINAL CLI -->
-    <section id="terminal" class="py-24 px-6 border-t">
+    <section id="terminal" class="py-24 px-6 border-t section-alt-bg">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-6 text-center">
-                <span class="accent-color font-mono text-xl">06.</span> Interactive CLI Console
+            <h2 class="text-3xl font-extrabold mb-6 text-center">
+                <span class="accent-color font-mono text-xl">05.</span> Interactive CLI Console
             </h2>
-            <p class="text-subtext text-center text-sm mb-8">Type commands below like <code class="accent-color">help</code>, <code class="accent-color">skills</code>, <code class="accent-color">specializations</code>, <code class="accent-color">contact</code>, or <code class="accent-color">clear</code>.</p>
+            <p class="text-subtext text-center text-sm mb-8">Type commands below like <code class="accent-color font-bold">help</code>, <code class="accent-color font-bold">skills</code>, <code class="accent-color font-bold">specializations</code>, <code class="accent-color font-bold">contact</code>, or <code class="accent-color font-bold">clear</code>.</p>
             
             <div class="terminal-box rounded-2xl shadow-2xl overflow-hidden font-mono text-sm border">
                 <div class="terminal-header px-4 py-3 border-b flex items-center justify-between">
                     <div class="flex items-center gap-2">
-                        <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-red-500 inline-block animate-pulse"></span>
                         <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
                         <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
-                        <span class="text-xs text-subtext ml-2">mushahid@portfolio:~</span>
+                        <span class="text-xs text-subtext ml-2">mushahid@beast-terminal:~</span>
                     </div>
                 </div>
                 <div id="terminalBody" class="p-6 h-64 overflow-y-auto space-y-3">
                     <div>Welcome to Mushahid Ali Kazmi's CLI Console. Type <span class="accent-color font-bold">help</span> to view available commands.</div>
                 </div>
                 <div class="terminal-input-bar px-4 py-3 border-t flex items-center gap-2">
-                    <span class="accent-color">➜</span>
-                    <span class="accent-color-cyan">~</span>
-                    <input type="text" id="terminalInput" autofocus class="bg-transparent flex-1 focus:outline-none font-mono" placeholder="Type a command...">
+                    <span class="accent-color font-bold">➜</span>
+                    <span class="accent-color-cyan font-bold">~</span>
+                    <input type="text" id="terminalInput" autofocus class="bg-transparent flex-1 focus:outline-none font-mono text-main" placeholder="Type a command...">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="py-24 px-6 border-t section-alt-bg">
+    <section id="contact" class="py-24 px-6 border-t">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">
-                <span class="accent-color font-mono text-xl">07.</span> Let's Work Together
+            <h2 class="text-3xl font-extrabold mb-6">
+                <span class="accent-color font-mono text-xl">06.</span> Connect With The Expert
             </h2>
-            <p class="text-subtext mb-10">Available for IT Support, Cybersecurity Analysis, and Network Engineering roles.</p>
+            <p class="text-subtext mb-10">Available for high-impact Cybersecurity, Network Engineering, and Software Development roles.</p>
             
             <div class="flex flex-wrap justify-center gap-6 mb-12">
-                <a href="mailto:mushahid.ssaak7610@gmail.com" class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg transition hover:shadow-md">
+                <a href="mailto:mushahid.ssaak7610@gmail.com" class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg transition hover:scale-105 shadow-md">
                     <i class="fa-solid fa-envelope accent-color text-xl"></i>
-                    <span class="text-sm font-semibold">mushahid.ssaak7610@gmail.com</span>
+                    <span class="text-sm font-semibold">mushahid.ssaak7610@gmail.com</span>[cite: 1]
                 </a>
-                <a href="tel:+923408825529" class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg transition hover:shadow-md">
+                <a href="tel:+923408825529" class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg transition hover:scale-105 shadow-md">
                     <i class="fa-solid fa-phone accent-color-cyan text-xl"></i>
-                    <span class="text-sm font-semibold">+92 340 8825529</span>
+                    <span class="text-sm font-semibold">+92 340 8825529</span>[cite: 1]
                 </a>
-                <div class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg">
+                <div class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg shadow-md">
                     <i class="fa-solid fa-location-dot text-purple-400 text-xl"></i>
-                    <span class="text-sm font-semibold">Garhi Dupatta, Muzaffarabad, AJK, Pakistan</span>
+                    <span class="text-sm font-semibold">Garhi Dupatta, Muzaffarabad, AJK, Pakistan</span>[cite: 1]
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CERTIFICATE PREVIEW MODAL -->
-    <div id="certModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 relative text-white shadow-2xl">
-            <button onclick="closeCertModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
+    <div id="certModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-fade-in">
+        <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-xl w-full p-8 relative text-white shadow-2xl">
+            <button onclick="closeCertModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white text-xl">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <h3 id="modalTitle" class="text-xl font-bold mb-1 accent-color">Certificate Title</h3>
+            <h3 id="modalTitle" class="text-2xl font-black mb-1 accent-color">Certificate Title</h3>
             <p id="modalMeta" class="text-xs font-mono text-gray-400 mb-6">Issuer • Date</p>
             
-            <div class="h-64 rounded-xl bg-slate-950 border border-slate-800 flex flex-col items-center justify-center p-6 text-center">
-                <i class="fa-solid fa-award text-6xl text-emerald-400 mb-4 animate-bounce"></i>
-                <p class="text-sm font-semibold text-slate-200">Verified Certificate Credential Preview</p>
-                <p class="text-xs text-slate-400 mt-2">Issued to Mushahid Ali Kazmi</p>
+            <div class="h-64 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-cyan-500/10 pointer-events-none"></div>
+                <i class="fa-solid fa-award text-6xl accent-color mb-4 animate-bounce"></i>
+                <p class="text-base font-bold text-slate-100">Verified Professional Credential</p>
+                <p class="text-xs text-slate-400 mt-2 font-mono">Awarded to Mushahid Ali Kazmi</p>
             </div>
             
-            <div class="mt-6 flex justify-end">
-                <button onclick="closeCertModal()" class="px-5 py-2 rounded-lg bg-emerald-500 text-slate-950 text-xs font-bold hover:bg-emerald-400 transition">
+            <div class="mt-8 flex justify-end">
+                <button onclick="closeCertModal()" class="px-6 py-2.5 rounded-xl bg-emerald-500 text-slate-950 text-xs font-extrabold hover:bg-emerald-400 transition shadow-lg">
                     Close Preview
                 </button>
             </div>
@@ -490,7 +487,7 @@
 
     <!-- FOOTER -->
     <footer class="py-8 text-center border-t text-xs text-subtext font-mono">
-        &copy; 2026 Mushahid Ali Kazmi. Built with modern web technologies.
+        &copy; 2026 Mushahid Ali Kazmi. Engineered for absolute excellence.
     </footer>
 
     <!-- Custom JavaScript -->
