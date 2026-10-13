@@ -1,24 +1,18 @@
-// Theme Toggle Function (Light / Dark)
+// Theme Toggle Function (Light White/Red vs Dark Dark/Green)
 function toggleTheme() {
     const html = document.documentElement;
     const icon = document.getElementById('themeIcon');
+    const text = document.getElementById('themeText');
     
     if (html.classList.contains('dark')) {
         html.classList.remove('dark');
-        html.setAttribute('data-theme', 'light');
         icon.className = 'fa-solid fa-sun';
-        document.body.className = "bg-slate-50 text-slate-900 font-sans antialiased";
+        text.textContent = 'Light (Red)';
     } else {
         html.classList.add('dark');
-        html.setAttribute('data-theme', 'dark');
         icon.className = 'fa-solid fa-moon';
-        document.body.className = "bg-slate-950 text-slate-100 font-sans antialiased";
+        text.textContent = 'Dark (Green)';
     }
-}
-
-// Color Palette Switcher Function
-function changePalette(paletteName) {
-    document.documentElement.setAttribute('data-palette', paletteName);
 }
 
 // Certification Filter Function
@@ -62,19 +56,22 @@ function appendTerminalOutput(text, isHtml = false) {
 function processCommand(cmd) {
     switch(cmd) {
         case 'help':
-            appendTerminalOutput('Available commands: <span class="text-emerald-400">about, skills, certs, contact, clear</span>', true);
+            appendTerminalOutput('Available commands: <span class="accent-color font-bold">about, skills, specializations, certs, contact, clear</span>', true);
             break;
         case 'about':
-            appendTerminalOutput('Mushahid Ali Kazmi: IT Support Specialist, Cybersecurity Analyst & Full-Stack Developer studying at Virtual University of Pakistan[cite: 4].');
+            appendTerminalOutput('Mushahid Ali Kazmi: IT Support Specialist, Cybersecurity Analyst & Full-Stack Developer studying at Virtual University of Pakistan.');
             break;
         case 'skills':
-            appendTerminalOutput('Skills: IT Support, TCP/IP, Cybersecurity, Fortinet Firewalls, C#/.NET, Systems Diagnostics, Help Desk[cite: 4].');
+            appendTerminalOutput('Skills: IT Support, TCP/IP, Cybersecurity, Fortinet Firewalls, C#/.NET, Systems Diagnostics, Help Desk.');
+            break;
+        case 'specializations':
+            appendTerminalOutput('Top Specializations: Cyber Incident Response (Infosec), Full-Stack Developer (Microsoft), IT Support (Google), Network Security (Fortinet).');
             break;
         case 'certs':
-            appendTerminalOutput('Over 77+ certifications completed from IBM, Google, Microsoft, Cisco, ISC2, and Fortinet!');
+            appendTerminalOutput('Over 77+ verified certifications completed from IBM, Google, Microsoft, Cisco, ISC2, and Fortinet!');
             break;
         case 'contact':
-            appendTerminalOutput('Email: mushahid.ssaak7610@gmail.com | Phone: +92 340 8825529[cite: 1]');
+            appendTerminalOutput('Email: mushahid.ssaak7610@gmail.com | Phone: +92 340 8825529');
             break;
         case 'clear':
             terminalBody.innerHTML = '';
