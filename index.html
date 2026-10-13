@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
     
     <script>
         tailwind.config = {
@@ -24,46 +26,6 @@
             }
         }
     </script>
-
-    <style>
-        /* Color Palette Themes */
-        :root[data-palette="cyber"] {
-            --accent-primary: #10b981; /* Emerald Green */
-            --accent-secondary: #06b6d4; /* Cyan */
-            --bg-glow: rgba(16, 185, 129, 0.15);
-        }
-        :root[data-palette="neon"] {
-            --accent-primary: #8b5cf6; /* Purple */
-            --accent-secondary: #ec4899; /* Pink */
-            --bg-glow: rgba(139, 92, 246, 0.15);
-        }
-        :root[data-palette="ocean"] {
-            --accent-primary: #3b82f6; /* Blue */
-            --accent-secondary: #14b8a6; /* Teal */
-            --bg-glow: rgba(59, 130, 246, 0.15);
-        }
-
-        /* Smooth Transitions */
-        body {
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .glow-effect {
-            box-shadow: 0 0 25px var(--bg-glow);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: rgba(0,0,0,0.1);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--accent-primary);
-            border-radius: 4px;
-        }
-    </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
 
@@ -112,7 +74,7 @@
                 Hi, I'm <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Mushahid Ali Kazmi</span>
             </h1>
             <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-mono">
-                IT Support Specialist | Cybersecurity Analyst | Networking Expert & Full-Stack Developer
+                IT Support Specialist | Cybersecurity Analyst | Networking Expert & Full-Stack Developer[cite: 4]
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#certifications" class="px-8 py-3.5 rounded-xl font-semibold bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20">
@@ -133,10 +95,10 @@
                     <span class="text-emerald-400 font-mono text-xl">01.</span> Professional Background
                 </h2>
                 <p class="text-slate-300 leading-relaxed mb-4">
-                    Highly motivated and technically skilled IT professional with elite expertise in **IT support, networking, cybersecurity, system troubleshooting, and technical operations**. Certified in Cisco networking and cybersecurity programs with extensive practical experience in configuring systems, diagnosing technical issues, supporting users, and maintaining secure IT environments[cite: 4].
+                    Highly motivated and technically skilled IT professional with elite expertise in <strong class="text-emerald-400">IT support, networking, cybersecurity, system troubleshooting, and technical operations</strong>[cite: 4]. Certified in Cisco networking and cybersecurity programs with extensive practical experience in configuring systems, diagnosing technical issues, supporting users, and maintaining secure IT environments[cite: 4].
                 </p>
                 <p class="text-slate-300 leading-relaxed mb-6">
-                    Currently pursuing a **Bachelor of Science in Computer Science (BSCS)** at the Virtual University of Pakistan[cite: 4], complemented by an unmatched collection of over **77 professional certifications** spanning Microsoft, Google, IBM, Cisco, ISC2, and Fortinet.
+                    Currently pursuing a <strong class="text-cyan-400">Bachelor of Science in Computer Science (BSCS)</strong> at the Virtual University of Pakistan[cite: 4], complemented by an unmatched collection of over <strong class="text-emerald-400">77 professional certifications</strong> spanning Microsoft, Google, IBM, Cisco, ISC2, and Fortinet.
                 </p>
                 <div class="grid grid-cols-2 gap-4 font-mono text-sm">
                     <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
@@ -364,92 +326,7 @@
         &copy; 2026 Mushahid Ali Kazmi. Built with modern web technologies.
     </footer>
 
-    <!-- JAVASCRIPT FOR INTERACTIVITY -->
-    <script>
-        // Theme Toggle (Light / Dark)
-        function toggleTheme() {
-            const html = document.documentElement;
-            const icon = document.getElementById('themeIcon');
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                html.setAttribute('data-theme', 'light');
-                icon.className = 'fa-solid fa-sun';
-                document.body.className = "bg-slate-50 text-slate-900 font-sans antialiased";
-            } else {
-                html.classList.add('dark');
-                html.setAttribute('data-theme', 'dark');
-                icon.className = 'fa-solid fa-moon';
-                document.body.className = "bg-slate-950 text-slate-100 font-sans antialiased";
-            }
-        }
-
-        // Color Palette Switcher
-        function changePalette(paletteName) {
-            document.documentElement.setAttribute('data-palette', paletteName);
-        }
-
-        // Certification Filter
-        function filterCerts(category) {
-            const cards = document.querySelectorAll('.cert-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.classList.contains(category)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Terminal Logic
-        const terminalInput = document.getElementById('terminalInput');
-        const terminalBody = document.getElementById('terminalBody');
-
-        terminalInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                const cmd = terminalInput.value.trim().toLowerCase();
-                appendTerminalOutput(`➜ ~ ${terminalInput.value}`);
-                processCommand(cmd);
-                terminalInput.value = '';
-            }
-        });
-
-        function appendTerminalOutput(text, isHtml = false) {
-            const div = document.createElement('div');
-            if (isHtml) {
-                div.innerHTML = text;
-            } else {
-                div.textContent = text;
-            }
-            terminalBody.appendChild(div);
-            terminalBody.scrollTop = terminalBody.scrollHeight;
-        }
-
-        function processCommand(cmd) {
-            switch(cmd) {
-                case 'help':
-                    appendTerminalOutput('Available commands: <span class="text-emerald-400">about, skills, certs, contact, clear</span>', true);
-                    break;
-                case 'about':
-                    appendTerminalOutput('Mushahid Ali Kazmi: IT Support Specialist, Cybersecurity Analyst & Full-Stack Developer studying at Virtual University of Pakistan[cite: 4].');
-                    break;
-                case 'skills':
-                    appendTerminalOutput('Skills: IT Support, TCP/IP, Cybersecurity, Fortinet Firewalls, C#/.NET, Systems Diagnostics, Help Desk[cite: 4].');
-                    break;
-                case 'certs':
-                    appendTerminalOutput('Over 77+ certifications completed from IBM, Google, Microsoft, Cisco, ISC2, and Fortinet!');
-                    break;
-                case 'contact':
-                    appendTerminalOutput('Email: mushahid.ssaak7610@gmail.com | Phone: +92 340 8825529[cite: 1]');
-                    break;
-                case 'clear':
-                    terminalBody.innerHTML = '';
-                    break;
-                case '':
-                    break;
-                default:
-                    appendTerminalOutput(`Command not recognized: ${cmd}. Type 'help' for available commands.`);
-            }
-        }
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
