@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" data-palette="cyber">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,36 +27,30 @@
         }
     </script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+<body class="bg-gray-950 text-gray-100 font-sans antialiased transition-colors duration-300">
 
     <!-- TOP NAVIGATION BAR -->
-    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80 border-b border-gray-800 transition-colors duration-300 header-bg">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold font-mono tracking-tight flex items-center gap-2">
-                <span class="text-emerald-400">&lt;</span><span class="text-white">Mushahid.Ali</span><span class="text-emerald-400">/&gt;</span>
+            <a href="#" class="text-xl font-bold font-mono tracking-tight flex items-center gap-2 logo-text">
+                <span>&lt;</span><span>Mushahid.Ali</span><span>/&gt;</span>
             </a>
 
             <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-emerald-400 transition">About</a>
-                <a href="#skills" class="hover:text-emerald-400 transition">Skills & Expertise</a>
-                <a href="#certifications" class="hover:text-emerald-400 transition">Certificates (77+)</a>
-                <a href="#terminal" class="hover:text-emerald-400 transition">Interactive CLI</a>
-                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium nav-links">
+                <a href="#about" class="transition">About</a>
+                <a href="#skills" class="transition">Skills & Expertise</a>
+                <a href="#specializations" class="transition">Specializations</a>
+                <a href="#certifications" class="transition">Certificates (77+)</a>
+                <a href="#terminal" class="transition">Interactive CLI</a>
+                <a href="#contact" class="transition">Contact</a>
             </nav>
 
-            <!-- Controls: Theme & Palette Switcher -->
-            <div class="flex items-center gap-3">
-                <!-- Palette Selector -->
-                <select id="paletteSelect" onchange="changePalette(this.value)" class="bg-slate-900 border border-slate-700 text-xs rounded-lg px-2 py-1.5 text-slate-300 focus:outline-none focus:border-emerald-500">
-                    <option value="cyber">Cyber Green</option>
-                    <option value="neon">Neon Purple</option>
-                    <option value="ocean">Ocean Blue</option>
-                </select>
-
-                <!-- Light/Dark Toggle -->
-                <button onclick="toggleTheme()" class="p-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 hover:text-white transition">
+            <!-- Light/Dark Mode Toggle -->
+            <div>
+                <button onclick="toggleTheme()" class="p-2.5 rounded-xl border theme-btn transition flex items-center gap-2 text-xs font-mono">
                     <i id="themeIcon" class="fa-solid fa-moon"></i>
+                    <span id="themeText">Dark (Green)</span>
                 </button>
             </div>
         </div>
@@ -64,23 +58,22 @@
 
     <!-- HERO SECTION -->
     <section class="min-h-screen flex items-center justify-center pt-24 px-6 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--bg-glow)_0%,transparent_70%)] pointer-events-none"></div>
         <div class="max-w-5xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400 mb-6 glow-effect">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full badge-box text-xs font-mono mb-6 shadow-sm">
+                <span class="w-2 h-2 rounded-full badge-dot animate-pulse"></span>
                 Available for IT & Cybersecurity Roles
             </div>
             <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-                Hi, I'm <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Mushahid Ali Kazmi</span>
+                Hi, I'm <span class="hero-title-gradient bg-clip-text text-transparent">Mushahid Ali Kazmi</span>
             </h1>
-            <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-mono">
-                IT Support Specialist | Cybersecurity Analyst | Networking Expert & Full-Stack Developer[cite: 4]
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 font-mono">
+                IT Support Specialist | Cybersecurity Analyst | Networking Expert & Full-Stack Developer
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#certifications" class="px-8 py-3.5 rounded-xl font-semibold bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20">
-                    View 77+ Certifications
+                <a href="#specializations" class="px-8 py-3.5 rounded-xl font-semibold primary-cta-btn transition shadow-lg">
+                    View Specializations
                 </a>
-                <a href="#contact" class="px-8 py-3.5 rounded-xl font-semibold bg-slate-900 border border-slate-800 text-slate-200 hover:bg-slate-800 transition">
+                <a href="#contact" class="px-8 py-3.5 rounded-xl font-semibold secondary-cta-btn transition">
                     Get in Touch
                 </a>
             </div>
@@ -88,52 +81,48 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40">
+    <section id="about" class="py-24 px-6 border-t border-gray-800 section-alt-bg">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
-                    <span class="text-emerald-400 font-mono text-xl">01.</span> Professional Background
+                    <span class="accent-color font-mono text-xl">01.</span> Professional Background
                 </h2>
-                <p class="text-slate-300 leading-relaxed mb-4">
-                    Highly motivated and technically skilled IT professional with elite expertise in <strong class="text-emerald-400">IT support, networking, cybersecurity, system troubleshooting, and technical operations</strong>[cite: 4]. Certified in Cisco networking and cybersecurity programs with extensive practical experience in configuring systems, diagnosing technical issues, supporting users, and maintaining secure IT environments[cite: 4].
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Highly motivated and technically skilled IT professional with elite expertise in <strong class="accent-color">IT support, networking, cybersecurity, system troubleshooting, and technical operations</strong>. Certified in Cisco networking and cybersecurity programs with extensive practical experience in configuring systems, diagnosing technical issues, supporting users, and maintaining secure IT environments.
                 </p>
-                <p class="text-slate-300 leading-relaxed mb-6">
-                    Currently pursuing a <strong class="text-cyan-400">Bachelor of Science in Computer Science (BSCS)</strong> at the Virtual University of Pakistan[cite: 4], complemented by an unmatched collection of over <strong class="text-emerald-400">77 professional certifications</strong> spanning Microsoft, Google, IBM, Cisco, ISC2, and Fortinet.
+                <p class="text-gray-300 leading-relaxed mb-6">
+                    Currently pursuing a <strong class="accent-color-cyan">Bachelor of Science in Computer Science (BSCS)</strong> at the Virtual University of Pakistan, complemented by an unmatched collection of over <strong class="accent-color">77 professional certifications</strong> spanning Microsoft, Google, IBM, Cisco, ISC2, and Fortinet.
                 </p>
                 <div class="grid grid-cols-2 gap-4 font-mono text-sm">
-                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                        <span class="text-emerald-400 block font-bold text-lg">77+</span>
+                    <div class="p-4 rounded-xl border card-bg">
+                        <span class="accent-color block font-bold text-lg">77+</span>
                         Verified Certificates
                     </div>
-                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                        <span class="text-cyan-400 block font-bold text-lg">BSCS</span>
-                        Virtual University[cite: 4]
+                    <div class="p-4 rounded-xl border card-bg">
+                        <span class="accent-color-cyan block font-bold text-lg">BSCS</span>
+                        Virtual University
                     </div>
                 </div>
             </div>
             <!-- Personal Info Card -->
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl relative">
-                <h3 class="text-xl font-bold mb-6 border-b border-slate-800 pb-4 text-emerald-400 font-mono">Personal Credentials</h3>
+            <div class="p-8 rounded-2xl border card-bg shadow-xl">
+                <h3 class="text-xl font-bold mb-6 border-b border-gray-700 pb-4 accent-color font-mono">Personal Credentials</h3>
                 <ul class="space-y-4 text-sm">
-                    <li class="flex justify-between border-b border-slate-800/50 pb-2">
-                        <span class="text-slate-400">Father's Name:</span>
-                        <span class="font-medium">Syed Khadim Hussain Shah[cite: 4]</span>
+                    <li class="flex justify-between border-b border-gray-700/50 pb-2">
+                        <span class="text-gray-400">Father's Name:</span>
+                        <span class="font-medium">Syed Khadim Hussain Shah</span>
                     </li>
-                    <li class="flex justify-between border-b border-slate-800/50 pb-2">
-                        <span class="text-slate-400">Date of Birth:</span>
-                        <span class="font-medium">June 16, 2006[cite: 4]</span>
+                    <li class="flex justify-between border-b border-gray-700/50 pb-2">
+                        <span class="text-gray-400">Date of Birth:</span>
+                        <span class="font-medium">June 16, 2006</span>
                     </li>
-                    <li class="flex justify-between border-b border-slate-800/50 pb-2">
-                        <span class="text-slate-400">Domicile / Region:</span>
-                        <span class="font-medium">AJK, Pakistan (Garhi Dupatta, Muzaffarabad)[cite: 1, 4]</span>
-                    </li>
-                    <li class="flex justify-between border-b border-slate-800/50 pb-2">
-                        <span class="text-slate-400">Nationality:</span>
-                        <span class="font-medium">Pakistani[cite: 4]</span>
+                    <li class="flex justify-between border-b border-gray-700/50 pb-2">
+                        <span class="text-gray-400">Domicile / Region:</span>
+                        <span class="font-medium">AJK, Pakistan (Garhi Dupatta, Muzaffarabad)</span>
                     </li>
                     <li class="flex justify-between">
-                        <span class="text-slate-400">CNIC:</span>
-                        <span class="font-medium font-mono">82303-1354086-7[cite: 4]</span>
+                        <span class="text-gray-400">Nationality:</span>
+                        <span class="font-medium">Pakistani</span>
                     </li>
                 </ul>
             </div>
@@ -141,188 +130,267 @@
     </section>
 
     <!-- CORE SKILLS & EXPERTISE -->
-    <section id="skills" class="py-24 px-6 border-t border-slate-800/60">
+    <section id="skills" class="py-24 px-6 border-t border-gray-800">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold mb-12 text-center">
-                <span class="text-emerald-400 font-mono text-xl">02.</span> Core Competencies & Skills
+                <span class="accent-color font-mono text-xl">02.</span> Core Competencies & Skills
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- IT Support -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-6">
+                <div class="p-6 rounded-2xl border card-bg">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 accent-color flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-headset"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">IT Support & Help Desk</h3>
-                    <ul class="space-y-2 text-sm text-slate-300">
-                        <li>• Technical Support & User Assistance[cite: 4]</li>
-                        <li>• Hardware & Software Troubleshooting[cite: 4]</li>
-                        <li>• System Maintenance & Diagnostics[cite: 4]</li>
-                        <li>• Help Desk Operations & Ticketing[cite: 4]</li>
-                        <li>• OS Installation & Configuration[cite: 4]</li>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>• Technical Support & User Assistance</li>
+                        <li>• Hardware & Software Troubleshooting</li>
+                        <li>• System Maintenance & Diagnostics</li>
+                        <li>• Help Desk Operations & Ticketing</li>
+                        <li>• OS Installation & Configuration</li>
                     </ul>
                 </div>
-                <!-- Networking -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-6">
+                <div class="p-6 rounded-2xl border card-bg">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 accent-color-cyan flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-network-wired"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Networking & Systems</h3>
-                    <ul class="space-y-2 text-sm text-slate-300">
-                        <li>• TCP/IP Fundamentals[cite: 4]</li>
-                        <li>• Router & Switch Configuration[cite: 4]</li>
-                        <li>• LAN/WAN Troubleshooting[cite: 4]</li>
-                        <li>• Fortinet Firewall Administrator[cite: 4]</li>
-                        <li>• IP Addressing & Connectivity[cite: 4]</li>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>• TCP/IP Fundamentals</li>
+                        <li>• Router & Switch Configuration</li>
+                        <li>• LAN/WAN Troubleshooting</li>
+                        <li>• Fortinet Firewall Administrator</li>
+                        <li>• IP Addressing & Connectivity</li>
                     </ul>
                 </div>
-                <!-- Cybersecurity -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                <div class="p-6 rounded-2xl border card-bg">
                     <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-shield-halved"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Cybersecurity & SecOps</h3>
-                    <ul class="space-y-2 text-sm text-slate-300">
-                        <li>• Threat Detection & Incident Response[cite: 4]</li>
-                        <li>• Vulnerability Assessment[cite: 4]</li>
-                        <li>• Security Best Practices[cite: 4]</li>
-                        <li>• ISC2 & CompTIA Security Concepts[cite: 4]</li>
-                        <li>• Enterprise Firewall Management[cite: 4]</li>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>• Threat Detection & Incident Response</li>
+                        <li>• Vulnerability Assessment</li>
+                        <li>• Security Best Practices</li>
+                        <li>• ISC2 & CompTIA Security Concepts</li>
+                        <li>• Enterprise Firewall Management</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL SPECIALIZATIONS SECTION -->
+    <section id="specializations" class="py-24 px-6 border-t border-gray-800 section-alt-bg">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-3">
+                <span class="accent-color font-mono text-xl">03.</span> Professional Specialization Certificates
+            </h2>
+            <p class="text-gray-400 text-sm mb-12">Elite multi-course professional specializations completed from top organizations.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Spec 1 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <!-- Placeholder for Certificate Image -->
+                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono accent-color">Infosec • October 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Cyber Incident Response Specialization</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Spec 2 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono accent-color-cyan">Microsoft • September 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Full-Stack Developer Professional Certificate</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Spec 3 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono text-blue-400">Google • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">IT Support Professional Certificate</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Spec 4 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono accent-color">Edureka • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Cyber Threat Intelligence and Incident Response Specialization</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Spec 5 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono text-purple-400">IBM • ISC2 • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Cybersecurity Specialist Professional Certificate</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Spec 6 -->
+                <div class="p-6 rounded-xl border card-bg flex flex-col justify-between">
+                    <div>
+                        <div class="h-36 rounded-lg bg-gray-800/50 border border-gray-700/60 mb-4 overflow-hidden flex items-center justify-center relative group">
+                            <i class="fa-solid fa-award text-4xl text-gray-600 group-hover:scale-110 transition"></i>
+                            <span class="absolute bottom-2 right-2 text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900 text-gray-400 border border-gray-700">Preview Image</span>
+                        </div>
+                        <span class="text-xs font-mono accent-color">Fortinet • August 2026</span>
+                        <h4 class="font-bold text-lg mt-2 mb-2">Network Security Specialization</h4>
+                    </div>
+                    <a href="#" class="text-xs font-semibold mt-4 inline-flex items-center gap-1 accent-color hover:underline">View Verified Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CERTIFICATIONS SHOWCASE -->
-    <section id="certifications" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40">
+    <section id="certifications" class="py-24 px-6 border-t border-gray-800">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center mb-12">
                 <div>
                     <h2 class="text-3xl font-bold mb-2">
-                        <span class="text-emerald-400 font-mono text-xl">03.</span> Professional Certifications
+                        <span class="accent-color font-mono text-xl">04.</span> All Certifications Archive
                     </h2>
-                    <p class="text-slate-400 text-sm">Over 77+ verified certifications completed from top-tier institutions.</p>
+                    <p class="text-gray-400 text-sm">Over 77+ verified certifications completed from top-tier institutions.</p>
                 </div>
                 <div class="mt-4 md:mt-0 flex gap-2">
-                    <button onclick="filterCerts('all')" class="px-4 py-2 rounded-lg bg-emerald-500 text-slate-950 text-xs font-semibold">All (77)</button>
-                    <button onclick="filterCerts('security')" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700">Cybersecurity</button>
-                    <button onclick="filterCerts('network')" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700">Networking</button>
+                    <button onclick="filterCerts('all')" class="px-4 py-2 rounded-lg primary-cta-btn text-xs font-semibold">All (77)</button>
+                    <button onclick="filterCerts('security')" class="px-4 py-2 rounded-lg border text-xs font-semibold filter-btn">Cybersecurity</button>
+                    <button onclick="filterCerts('network')" class="px-4 py-2 rounded-lg border text-xs font-semibold filter-btn">Networking</button>
                 </div>
             </div>
 
             <!-- Cert Grid -->
             <div id="certGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Cert 1 -->
-                <div class="cert-card security bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                <div class="cert-card security p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">Infosec • Oct 2026</span>
+                        <span class="text-xs font-mono accent-color">Infosec • Oct 2026</span>
                         <h4 class="font-bold text-lg mt-3 mb-2">Technical Deep Dive with Incident Response Tools</h4>
                     </div>
-                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-emerald-400"></i> Verified Certificate</span>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check accent-color"></i> Verified Certificate</span>
                 </div>
-                <!-- Cert 2 -->
-                <div class="cert-card network bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                <div class="cert-card network p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded">Fortinet • Aug 2026</span>
+                        <span class="text-xs font-mono accent-color-cyan">Fortinet • Aug 2026</span>
                         <h4 class="font-bold text-lg mt-3 mb-2">Network Security Support Engineer</h4>
                     </div>
-                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-cyan-400"></i> Verified Certificate</span>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check accent-color-cyan"></i> Verified Certificate</span>
                 </div>
-                <!-- Cert 3 -->
-                <div class="cert-card security bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                <div class="cert-card security p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <span class="text-xs font-mono text-purple-400 bg-purple-500/10 px-2 py-1 rounded">ISC2 • Aug 2026</span>
+                        <span class="text-xs font-mono text-purple-400">ISC2 • Aug 2026</span>
                         <h4 class="font-bold text-lg mt-3 mb-2">Security Operations & Network Security</h4>
                     </div>
-                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-purple-400"></i> Verified Certificate</span>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check text-purple-400"></i> Verified Certificate</span>
                 </div>
-                <!-- Cert 4 -->
-                <div class="cert-card security bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                <div class="cert-card security p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">Cisco • 2026</span>
+                        <span class="text-xs font-mono accent-color">Cisco • 2026</span>
                         <h4 class="font-bold text-lg mt-3 mb-2">Junior Cybersecurity Analyst Career Path</h4>
                     </div>
-                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-emerald-400"></i> Verified Certificate & Badge</span>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check accent-color"></i> Verified Certificate & Badge</span>
                 </div>
-                <!-- Cert 5 -->
-                <div class="cert-card network bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                <div class="cert-card network p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded">Cisco • 2026</span>
+                        <span class="text-xs font-mono accent-color-cyan">Cisco • 2026</span>
                         <h4 class="font-bold text-lg mt-3 mb-2">Network Technician Career Path</h4>
                     </div>
-                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-cyan-400"></i> Verified Certificate & Badge</span>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check accent-color-cyan"></i> Verified Certificate & Badge</span>
                 </div>
-                <!-- Cert 6 -->
-                <div class="cert-card security bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                <div class="cert-card security p-6 rounded-xl border card-bg flex flex-col justify-between">
                     <div>
-                        <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-2 py-1 rounded">Microsoft • Aug 2026</span>
+                        <span class="text-xs font-mono text-blue-400">Microsoft • Aug 2026</span>
                         <h4 class="font-bold text-lg mt-3 mb-2">Full-Stack Developer Capstone Project</h4>
                     </div>
-                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-blue-400"></i> Verified Certificate</span>
+                    <span class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-circle-check text-blue-400"></i> Verified Certificate</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- INTERACTIVE TERMINAL -->
-    <section id="terminal" class="py-24 px-6 border-t border-slate-800/60">
+    <section id="terminal" class="py-24 px-6 border-t border-gray-800 section-alt-bg">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center">
-                <span class="text-emerald-400 font-mono text-xl">04.</span> Interactive Terminal CLI
+                <span class="accent-color font-mono text-xl">05.</span> Interactive Terminal CLI
             </h2>
-            <p class="text-slate-400 text-center text-sm mb-8">Type commands below like <code class="text-emerald-400">help</code>, <code class="text-emerald-400">skills</code>, <code class="text-emerald-400">contact</code>, or <code class="text-emerald-400">clear</code>.</p>
+            <p class="text-gray-400 text-center text-sm mb-8">Type commands below like <code class="accent-color">help</code>, <code class="accent-color">skills</code>, <code class="accent-color">contact</code>, or <code class="accent-color">clear</code>.</p>
             
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden font-mono text-sm">
-                <!-- Terminal Header -->
-                <div class="bg-slate-900 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+            <div class="terminal-box rounded-2xl shadow-2xl overflow-hidden font-mono text-sm border">
+                <div class="terminal-header px-4 py-3 border-b flex items-center justify-between">
                     <div class="flex items-center gap-2">
                         <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
                         <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
                         <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
-                        <span class="text-xs text-slate-400 ml-2">mushahid@portfolio:~</span>
+                        <span class="text-xs text-gray-400 ml-2">mushahid@portfolio:~</span>
                     </div>
                 </div>
-                <!-- Terminal Body -->
-                <div id="terminalBody" class="p-6 h-64 overflow-y-auto text-slate-300 space-y-3">
-                    <div>Welcome to Mushahid Ali Kazmi's Interactive Terminal. Type <span class="text-emerald-400 font-bold">help</span> to view available commands.</div>
+                <div id="terminalBody" class="p-6 h-64 overflow-y-auto space-y-3">
+                    <div>Welcome to Mushahid Ali Kazmi's Interactive Terminal. Type <span class="accent-color font-bold">help</span> to view available commands.</div>
                 </div>
-                <!-- Terminal Input -->
-                <div class="bg-slate-900/60 border-t border-slate-800 px-4 py-3 flex items-center gap-2">
-                    <span class="text-emerald-400">➜</span>
-                    <span class="text-cyan-400">~</span>
-                    <input type="text" id="terminalInput" autofocus class="bg-transparent flex-1 focus:outline-none text-slate-100 font-mono" placeholder="Type a command...">
+                <div class="terminal-input-bar px-4 py-3 border-t flex items-center gap-2">
+                    <span class="accent-color">➜</span>
+                    <span class="accent-color-cyan">~</span>
+                    <input type="text" id="terminalInput" autofocus class="bg-transparent flex-1 focus:outline-none font-mono" placeholder="Type a command...">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40">
+    <section id="contact" class="py-24 px-6 border-t border-gray-800">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-6">
-                <span class="text-emerald-400 font-mono text-xl">05.</span> Let's Work Together
+                <span class="accent-color font-mono text-xl">06.</span> Let's Work Together
             </h2>
-            <p class="text-slate-400 mb-10">Looking for an IT Support Specialist, Cybersecurity Analyst, or Developer? Get in touch with me directly.</p>
+            <p class="text-gray-400 mb-10">Looking for an IT Support Specialist, Cybersecurity Analyst, or Developer? Get in touch with me directly.</p>
             
             <div class="flex flex-wrap justify-center gap-6 mb-12">
-                <a href="mailto:mushahid.ssaak7610@gmail.com" class="flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500 transition">
-                    <i class="fa-solid fa-envelope text-emerald-400 text-xl"></i>
-                    <span class="text-sm font-medium">mushahid.ssaak7610@gmail.com</span>[cite: 1]
+                <a href="mailto:mushahid.ssaak7610@gmail.com" class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg hover:border-emerald-500 transition">
+                    <i class="fa-solid fa-envelope accent-color text-xl"></i>
+                    <span class="text-sm font-medium">mushahid.ssaak7610@gmail.com</span>
                 </a>
-                <a href="tel:+923408825529" class="flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500 transition">
-                    <i class="fa-solid fa-phone text-cyan-400 text-xl"></i>
-                    <span class="text-sm font-medium">+92 340 8825529</span>[cite: 1]
+                <a href="tel:+923408825529" class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg hover:border-emerald-500 transition">
+                    <i class="fa-solid fa-phone accent-color-cyan text-xl"></i>
+                    <span class="text-sm font-medium">+92 340 8825529</span>
                 </a>
-                <div class="flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="flex items-center gap-3 px-6 py-4 rounded-xl border card-bg">
                     <i class="fa-solid fa-location-dot text-purple-400 text-xl"></i>
-                    <span class="text-sm font-medium">Garhi Dupatta, Muzaffarabad, AJK, Pakistan</span>[cite: 1]
+                    <span class="text-sm font-medium">Garhi Dupatta, Muzaffarabad, AJK, Pakistan</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-8 text-center border-t border-slate-800 text-xs text-slate-500 font-mono">
+    <footer class="py-8 text-center border-t border-gray-800 text-xs text-gray-500 font-mono">
         &copy; 2026 Mushahid Ali Kazmi. Built with modern web technologies.
     </footer>
 
