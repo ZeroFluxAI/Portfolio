@@ -55,7 +55,7 @@ function appendTerminalOutput(text, isHtml = false) {
 function processCommand(cmd) {
     switch(cmd) {
         case 'help':
-            appendTerminalOutput('Available commands: <span class="accent-color font-bold">about, skills, specializations, contact, clear</span>', true);
+            appendTerminalOutput('Available commands: <span class="accent-color font-bold">about, skills, specializations, courses, contact, clear</span>', true);
             break;
         case 'about':
             appendTerminalOutput('Mushahid Ali Kazmi: Elite Cybersecurity Specialist, Network Architect & Software Engineer.');
@@ -64,7 +64,10 @@ function processCommand(cmd) {
             appendTerminalOutput('Expertise: FortiGate Firewalls, Incident Response, Penetration Testing, C#/.NET, TCP/IP, Digital Forensics.');
             break;
         case 'specializations':
-            appendTerminalOutput('Master Specializations: Cyber Incident Response (Infosec), Full-Stack Developer (Microsoft), Cybersecurity Specialist (IBM & ISC2), Fortinet Network Security.');
+            appendTerminalOutput('Master Specializations: Cyber Incident Response, Microsoft Full-Stack, Google IT Support, IBM Cybersecurity Analyst, Fortinet Network Security.');
+            break;
+        case 'courses':
+            appendTerminalOutput('Course Archive: Over 70+ verified modules across Cybersecurity, DevOps, Infrastructure, and Project Management.');
             break;
         case 'contact':
             appendTerminalOutput('Email: mushahid.ssaak7610@gmail.com | Phone: +92 340 8825529');[cite: 1]
