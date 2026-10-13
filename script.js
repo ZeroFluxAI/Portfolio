@@ -1,4 +1,4 @@
-// Theme Toggle Function (Light White/Red vs Dark Dark/Green)
+// Theme Toggle Function (Light White/Indigo vs Dark Dark/Green)
 function toggleTheme() {
     const html = document.documentElement;
     const icon = document.getElementById('themeIcon');
@@ -7,7 +7,7 @@ function toggleTheme() {
     if (html.classList.contains('dark')) {
         html.classList.remove('dark');
         icon.className = 'fa-solid fa-sun';
-        text.textContent = 'Light (Red)';
+        text.textContent = 'Light (Blue)';
     } else {
         html.classList.add('dark');
         icon.className = 'fa-solid fa-moon';
@@ -56,7 +56,7 @@ function appendTerminalOutput(text, isHtml = false) {
 function processCommand(cmd) {
     switch(cmd) {
         case 'help':
-            appendTerminalOutput('Available commands: <span class="accent-color font-bold">about, skills, specializations, certs, contact, clear</span>', true);
+            appendTerminalOutput('Available commands: <span class="accent-color font-bold">about, skills, specializations, pm, certs, contact, clear</span>', true);
             break;
         case 'about':
             appendTerminalOutput('Mushahid Ali Kazmi: IT Support Specialist, Cybersecurity Analyst & Full-Stack Developer studying at Virtual University of Pakistan.');
@@ -65,7 +65,10 @@ function processCommand(cmd) {
             appendTerminalOutput('Skills: IT Support, TCP/IP, Cybersecurity, Fortinet Firewalls, C#/.NET, Systems Diagnostics, Help Desk.');
             break;
         case 'specializations':
-            appendTerminalOutput('Top Specializations: Cyber Incident Response (Infosec), Full-Stack Developer (Microsoft), IT Support (Google), Network Security (Fortinet).');
+            appendTerminalOutput('Top Specializations: Cyber Incident Response, Full-Stack Developer, IT Support, Cybersecurity Specialist, Network Security.');
+            break;
+        case 'pm':
+            appendTerminalOutput('Project Management: IBM IT Project Manager Professional Certificate, CAPM practice exams, Scrum Master, Agile Development.');
             break;
         case 'certs':
             appendTerminalOutput('Over 77+ verified certifications completed from IBM, Google, Microsoft, Cisco, ISC2, and Fortinet!');
