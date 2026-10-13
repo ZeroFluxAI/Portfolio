@@ -58,16 +58,16 @@ function processCommand(cmd) {
             appendTerminalOutput('Available commands: <span class="accent-color font-bold">about, skills, specializations, contact, clear</span>', true);
             break;
         case 'about':
-            appendTerminalOutput('Mushahid Ali Kazmi: IT Support Specialist, Cybersecurity Analyst & Software Engineer.');
+            appendTerminalOutput('Mushahid Ali Kazmi: Elite Cybersecurity Specialist, Network Architect & Software Engineer.');
             break;
         case 'skills':
-            appendTerminalOutput('Skills: Fortinet Firewalls, Incident Response, Penetration Testing, C#/.NET, TCP/IP, SecOps.');
+            appendTerminalOutput('Expertise: FortiGate Firewalls, Incident Response, Penetration Testing, C#/.NET, TCP/IP, Digital Forensics.');
             break;
         case 'specializations':
-            appendTerminalOutput('Specializations: Cyber Incident Response (Infosec), Full-Stack Developer (Microsoft), Cybersecurity Specialist (IBM & ISC2), Fortinet Network Security.');
+            appendTerminalOutput('Master Specializations: Cyber Incident Response (Infosec), Full-Stack Developer (Microsoft), Cybersecurity Specialist (IBM & ISC2), Fortinet Network Security.');
             break;
         case 'contact':
-            appendTerminalOutput('Email: mushahid.ssaak7610@gmail.com | Phone: +92 340 8825529');
+            appendTerminalOutput('Email: mushahid.ssaak7610@gmail.com | Phone: +92 340 8825529');[cite: 1]
             break;
         case 'clear':
             terminalBody.innerHTML = '';
