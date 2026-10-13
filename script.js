@@ -1,4 +1,4 @@
-// Theme Toggle Function (Light White/Indigo vs Dark Dark/Green)
+// Theme Toggle Function
 function toggleTheme() {
     const html = document.documentElement;
     const icon = document.getElementById('themeIcon');
@@ -7,27 +7,26 @@ function toggleTheme() {
     if (html.classList.contains('dark')) {
         html.classList.remove('dark');
         icon.className = 'fa-solid fa-sun';
-        text.textContent = 'Light (Blue)';
+        text.textContent = 'Light Mode';
     } else {
         html.classList.add('dark');
         icon.className = 'fa-solid fa-moon';
-        text.textContent = 'Dark (Green)';
+        text.textContent = 'Dark Mode';
     }
 }
 
-// Certification Filter Function
-function filterCerts(category) {
-    const cards = document.querySelectorAll('.cert-card');
-    cards.forEach(card => {
-        if (category === 'all' || card.classList.contains(category)) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
-    });
+// Modal Control for Specialization Certificates
+function openCertModal(title, issuer, date) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalMeta').textContent = `${issuer} • ${date}`;
+    document.getElementById('certModal').classList.remove('hidden');
 }
 
-// Interactive Terminal CLI Logic
+function closeCertModal() {
+    document.getElementById('certModal').classList.add('hidden');
+}
+
+// Interactive Terminal Logic
 const terminalInput = document.getElementById('terminalInput');
 const terminalBody = document.getElementById('terminalBody');
 
@@ -56,22 +55,16 @@ function appendTerminalOutput(text, isHtml = false) {
 function processCommand(cmd) {
     switch(cmd) {
         case 'help':
-            appendTerminalOutput('Available commands: <span class="accent-color font-bold">about, skills, specializations, pm, certs, contact, clear</span>', true);
+            appendTerminalOutput('Available commands: <span class="accent-color font-bold">about, skills, specializations, contact, clear</span>', true);
             break;
         case 'about':
-            appendTerminalOutput('Mushahid Ali Kazmi: IT Support Specialist, Cybersecurity Analyst & Full-Stack Developer studying at Virtual University of Pakistan.');
+            appendTerminalOutput('Mushahid Ali Kazmi: IT Support Specialist, Cybersecurity Analyst & Software Engineer.');
             break;
         case 'skills':
-            appendTerminalOutput('Skills: IT Support, TCP/IP, Cybersecurity, Fortinet Firewalls, C#/.NET, Systems Diagnostics, Help Desk.');
+            appendTerminalOutput('Skills: Fortinet Firewalls, Incident Response, Penetration Testing, C#/.NET, TCP/IP, SecOps.');
             break;
         case 'specializations':
-            appendTerminalOutput('Top Specializations: Cyber Incident Response, Full-Stack Developer, IT Support, Cybersecurity Specialist, Network Security.');
-            break;
-        case 'pm':
-            appendTerminalOutput('Project Management: IBM IT Project Manager Professional Certificate, CAPM practice exams, Scrum Master, Agile Development.');
-            break;
-        case 'certs':
-            appendTerminalOutput('Over 77+ verified certifications completed from IBM, Google, Microsoft, Cisco, ISC2, and Fortinet!');
+            appendTerminalOutput('Specializations: Cyber Incident Response (Infosec), Full-Stack Developer (Microsoft), Cybersecurity Specialist (IBM & ISC2), Fortinet Network Security.');
             break;
         case 'contact':
             appendTerminalOutput('Email: mushahid.ssaak7610@gmail.com | Phone: +92 340 8825529');
