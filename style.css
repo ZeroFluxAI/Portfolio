@@ -1,14 +1,14 @@
-/* LIGHT MODE THEME (White & Red) */
+/* LIGHT MODE THEME (Professional White & Indigo/Royal Blue) */
 :root {
     --bg-primary: #ffffff;
     --bg-alt: #f8fafc;
     --text-primary: #0f172a;
     --text-secondary: #475569;
-    --accent: #ef4444; /* Red */
-    --accent-cyan: #dc2626; /* Deep Red accent */
+    --accent: #4f46e5; /* Indigo Blue */
+    --accent-cyan: #0284c7; /* Sky Blue accent */
     --card-bg: #ffffff;
     --border-color: #e2e8f0;
-    --header-bg: rgba(255, 255, 255, 0.85);
+    --header-bg: rgba(255, 255, 255, 0.90);
 }
 
 /* DARK MODE THEME (Dark & Green) */
@@ -21,7 +21,7 @@ html.dark {
     --accent-cyan: #06b6d4; /* Cyan */
     --card-bg: #0f172a;
     --border-color: #1e293b;
-    --header-bg: rgba(3, 7, 18, 0.85);
+    --header-bg: rgba(3, 7, 18, 0.90);
 }
 
 body {
@@ -45,7 +45,7 @@ body {
 
 .primary-cta-btn {
     background-color: var(--accent);
-    color: var(--bg-primary);
+    color: #ffffff;
 }
 .primary-cta-btn:hover {
     opacity: 0.9;
