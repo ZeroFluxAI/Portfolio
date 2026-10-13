@@ -1,45 +1,99 @@
-/* Color Palette Themes Configuration */
-:root[data-palette="cyber"] {
-    --accent-primary: #10b981; /* Emerald Green */
-    --accent-secondary: #06b6d4; /* Cyan */
-    --bg-glow: rgba(16, 185, 129, 0.15);
+/* LIGHT MODE THEME (White & Red) */
+:root {
+    --bg-primary: #ffffff;
+    --bg-alt: #f8fafc;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent: #ef4444; /* Red */
+    --accent-cyan: #dc2626; /* Deep Red accent */
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --header-bg: rgba(255, 255, 255, 0.85);
 }
 
-:root[data-palette="neon"] {
-    --accent-primary: #8b5cf6; /* Purple */
-    --accent-secondary: #ec4899; /* Pink */
-    --bg-glow: rgba(139, 92, 246, 0.15);
+/* DARK MODE THEME (Dark & Green) */
+html.dark {
+    --bg-primary: #030712;
+    --bg-alt: #0b0f19;
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --accent: #10b981; /* Green */
+    --accent-cyan: #06b6d4; /* Cyan */
+    --card-bg: #0f172a;
+    --border-color: #1e293b;
+    --header-bg: rgba(3, 7, 18, 0.85);
 }
 
-:root[data-palette="ocean"] {
-    --accent-primary: #3b82f6; /* Blue */
-    --accent-secondary: #14b8a6; /* Teal */
-    --bg-glow: rgba(59, 130, 246, 0.15);
-}
-
-/* Smooth Body Transitions */
 body {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
-.glow-effect {
-    box-shadow: 0 0 25px var(--bg-glow);
+.header-bg { background-color: var(--header-bg); border-color: var(--border-color); }
+.section-alt-bg { background-color: var(--bg-alt); }
+.card-bg { background-color: var(--card-bg); border-color: var(--border-color); }
+.accent-color { color: var(--accent); }
+.accent-color-cyan { color: var(--accent-cyan); }
+
+.logo-text span:first-child, .logo-text span:last-child { color: var(--accent); }
+.badge-box { background-color: var(--card-bg); border-color: var(--border-color); color: var(--accent); }
+.badge-dot { background-color: var(--accent); }
+
+.hero-title-gradient {
+    background-image: linear-gradient(to right, var(--accent), var(--accent-cyan));
 }
 
-/* Custom Styled Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
+.primary-cta-btn {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+}
+.primary-cta-btn:hover {
+    opacity: 0.9;
 }
 
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
+.secondary-cta-btn {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+.secondary-cta-btn:hover {
+    border-color: var(--accent);
 }
 
-::-webkit-scrollbar-thumb {
-    background: var(--accent-primary);
-    border-radius: 4px;
+.theme-btn {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+}
+.theme-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent);
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-secondary);
+.filter-btn {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-secondary);
 }
+.filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.terminal-box {
+    background-color: var(--bg-primary);
+    border-color: var(--border-color);
+}
+.terminal-header {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+.terminal-input-bar {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-alt); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
