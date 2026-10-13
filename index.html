@@ -1,148 +1,455 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" data-palette="cyber">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cybersecurity & Full Stack Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushahid Ali Kazmi | IT Support, Cybersecurity & Full-Stack Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Color Palette Themes */
+        :root[data-palette="cyber"] {
+            --accent-primary: #10b981; /* Emerald Green */
+            --accent-secondary: #06b6d4; /* Cyan */
+            --bg-glow: rgba(16, 185, 129, 0.15);
+        }
+        :root[data-palette="neon"] {
+            --accent-primary: #8b5cf6; /* Purple */
+            --accent-secondary: #ec4899; /* Pink */
+            --bg-glow: rgba(139, 92, 246, 0.15);
+        }
+        :root[data-palette="ocean"] {
+            --accent-primary: #3b82f6; /* Blue */
+            --accent-secondary: #14b8a6; /* Teal */
+            --bg-glow: rgba(59, 130, 246, 0.15);
+        }
+
+        /* Smooth Transitions */
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 25px var(--bg-glow);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-primary);
+            border-radius: 4px;
+        }
+    </style>
 </head>
-<body data-theme="dark">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
 
-  <header role="banner">
-    <nav aria-label="Main Navigation">
-      <div class="logo">
-        <span class="terminal-prompt">&gt;_</span> SEC_DEV.IO
-      </div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#credentials">Credentials</a></li>
-        <li><a href="#projects">Specializations</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Theme Switch</button>
-    </nav>
-  </header>
+    <!-- TOP NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold font-mono tracking-tight flex items-center gap-2">
+                <span class="text-emerald-400">&lt;</span><span class="text-white">Mushahid.Ali</span><span class="text-emerald-400">/&gt;</span>
+            </a>
 
-  <main role="main">
-    <!-- Hero Section -->
-    <section id="about" class="hero">
-      <div class="hero-content">
-        <div class="status-badge"><span class="pulse-dot"></span> System Online | Defense & Development</div>
-        <h1>Cybersecurity Specialist &amp; Full Stack Engineer</h1>
-        <p class="hero-bio">
-          Combining elite threat intelligence, incident response, and enterprise system analysis with full-stack Microsoft engineering. Architecting impenetrable security infrastructures while building high-performance web applications.
-        </p>
-        <div class="cta-buttons">
-          <a href="#contact" class="btn primary-btn">Initiate Contact</a>
-          <a href="#credentials" class="btn secondary-btn">View Certifications</a>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-emerald-400 transition">About</a>
+                <a href="#skills" class="hover:text-emerald-400 transition">Skills & Expertise</a>
+                <a href="#certifications" class="hover:text-emerald-400 transition">Certificates (77+)</a>
+                <a href="#terminal" class="hover:text-emerald-400 transition">Interactive CLI</a>
+                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+            </nav>
+
+            <!-- Controls: Theme & Palette Switcher -->
+            <div class="flex items-center gap-3">
+                <!-- Palette Selector -->
+                <select id="paletteSelect" onchange="changePalette(this.value)" class="bg-slate-900 border border-slate-700 text-xs rounded-lg px-2 py-1.5 text-slate-300 focus:outline-none focus:border-emerald-500">
+                    <option value="cyber">Cyber Green</option>
+                    <option value="neon">Neon Purple</option>
+                    <option value="ocean">Ocean Blue</option>
+                </select>
+
+                <!-- Light/Dark Toggle -->
+                <button onclick="toggleTheme()" class="p-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 hover:text-white transition">
+                    <i id="themeIcon" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
         </div>
-      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex items-center justify-center pt-24 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--bg-glow)_0%,transparent_70%)] pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400 mb-6 glow-effect">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Available for IT & Cybersecurity Roles
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                Hi, I'm <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Mushahid Ali Kazmi</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-mono">
+                IT Support Specialist | Cybersecurity Analyst | Networking Expert & Full-Stack Developer
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#certifications" class="px-8 py-3.5 rounded-xl font-semibold bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20">
+                    View 77+ Certifications
+                </a>
+                <a href="#contact" class="px-8 py-3.5 rounded-xl font-semibold bg-slate-900 border border-slate-800 text-slate-200 hover:bg-slate-800 transition">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Credentials & Diplomas -->
-    <section id="credentials" class="container">
-      <h2 class="section-title">Certifications &amp; Diplomas</h2>
-      <div class="credentials-grid">
-        
-        <article class="cred-card">
-          <div class="cred-icon">🛡️</div>
-          <h3>IBM Cybersecurity Analyst</h3>
-          <p class="cred-org">IBM Authorized Certification</p>
-          <p>Specialized in continuous monitoring, threat detection, network security governance, and security operations center (SOC) workflows.</p>
-        </article>
-
-        <article class="cred-card">
-          <div class="cred-icon">🔒</div>
-          <h3>ISC² Security Professional</h3>
-          <p class="cred-org">ISC² Certified</p>
-          <p>Proficient in international cybersecurity standards, access controls, risk management framework, and infrastructure defense.</p>
-        </article>
-
-        <article class="cred-card">
-          <div class="cred-icon">🎯</div>
-          <h3>CTI &amp; IR Specialist</h3>
-          <p class="cred-org">Threat Intel &amp; Incident Response</p>
-          <p>Expertise in Cyber Threat Intelligence (CTI) gathering, attack vector mitigation, digital forensics, and active breach response.</p>
-        </article>
-
-        <article class="cred-card">
-          <div class="cred-icon">⚡</div>
-          <h3>Microsoft Full Stack Developer</h3>
-          <p class="cred-org">Frontend &amp; Backend Diplomas</p>
-          <p>End-to-end web architectures using modern JavaScript frameworks, C#/.NET backend APIs, database management, and cloud integrations.</p>
-        </article>
-
-        <article class="cred-card">
-          <div class="cred-icon">📊</div>
-          <h3>IBM Systems Analyst</h3>
-          <p class="cred-org">Enterprise Systems Architecture</p>
-          <p>Designing scalable IT enterprise infrastructures, optimizing data flows, and aligning system requirements with security models.</p>
-        </article>
-
-        <article class="cred-card">
-          <div class="cred-icon">💼</div>
-          <h3>IBM IT Project Manager</h3>
-          <p class="cred-org">Agile &amp; Scrum Delivery</p>
-          <p>Directing technical teams, risk assessments, resource allocation, and delivering complex IT security projects on schedule.</p>
-        </article>
-
-      </div>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="text-emerald-400 font-mono text-xl">01.</span> Professional Background
+                </h2>
+                <p class="text-slate-300 leading-relaxed mb-4">
+                    Highly motivated and technically skilled IT professional with elite expertise in **IT support, networking, cybersecurity, system troubleshooting, and technical operations**. Certified in Cisco networking and cybersecurity programs with extensive practical experience in configuring systems, diagnosing technical issues, supporting users, and maintaining secure IT environments[cite: 4].
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                    Currently pursuing a **Bachelor of Science in Computer Science (BSCS)** at the Virtual University of Pakistan[cite: 4], complemented by an unmatched collection of over **77 professional certifications** spanning Microsoft, Google, IBM, Cisco, ISC2, and Fortinet.
+                </p>
+                <div class="grid grid-cols-2 gap-4 font-mono text-sm">
+                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                        <span class="text-emerald-400 block font-bold text-lg">77+</span>
+                        Verified Certificates
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                        <span class="text-cyan-400 block font-bold text-lg">BSCS</span>
+                        Virtual University[cite: 4]
+                    </div>
+                </div>
+            </div>
+            <!-- Personal Info Card -->
+            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl relative">
+                <h3 class="text-xl font-bold mb-6 border-b border-slate-800 pb-4 text-emerald-400 font-mono">Personal Credentials</h3>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex justify-between border-b border-slate-800/50 pb-2">
+                        <span class="text-slate-400">Father's Name:</span>
+                        <span class="font-medium">Syed Khadim Hussain Shah[cite: 4]</span>
+                    </li>
+                    <li class="flex justify-between border-b border-slate-800/50 pb-2">
+                        <span class="text-slate-400">Date of Birth:</span>
+                        <span class="font-medium">June 16, 2006[cite: 4]</span>
+                    </li>
+                    <li class="flex justify-between border-b border-slate-800/50 pb-2">
+                        <span class="text-slate-400">Domicile / Region:</span>
+                        <span class="font-medium">AJK, Pakistan (Garhi Dupatta, Muzaffarabad)[cite: 1, 4]</span>
+                    </li>
+                    <li class="flex justify-between border-b border-slate-800/50 pb-2">
+                        <span class="text-slate-400">Nationality:</span>
+                        <span class="font-medium">Pakistani[cite: 4]</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-slate-400">CNIC:</span>
+                        <span class="font-medium font-mono">82303-1354086-7[cite: 4]</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <!-- Project / Specialization Grid -->
-    <section id="projects" class="container">
-      <h2 class="section-title">Core Competencies</h2>
-      <div class="project-grid">
-        
-        <article class="card">
-          <div class="card-tag">Cyber Defense</div>
-          <h3>Threat Intelligence Platform</h3>
-          <p>Automated SIEM logging pipeline integrating real-time threat feed aggregation, intrusion detection rules, and proactive vulnerability scanning.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-tag">Full Stack Development</div>
-          <h3>Enterprise Web Portal</h3>
-          <p>Custom secure web application featuring end-to-end data encryption, OAuth2 verification, and high-speed database transaction handling.</p>
-        </article>
-
-      </div>
+    <!-- CORE SKILLS & EXPERTISE -->
+    <section id="skills" class="py-24 px-6 border-t border-slate-800/60">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="text-emerald-400 font-mono text-xl">02.</span> Core Competencies & Skills
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- IT Support -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">IT Support & Help Desk</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li>• Technical Support & User Assistance[cite: 4]</li>
+                        <li>• Hardware & Software Troubleshooting[cite: 4]</li>
+                        <li>• System Maintenance & Diagnostics[cite: 4]</li>
+                        <li>• Help Desk Operations & Ticketing[cite: 4]</li>
+                        <li>• OS Installation & Configuration[cite: 4]</li>
+                    </ul>
+                </div>
+                <!-- Networking -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Networking & Systems</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li>• TCP/IP Fundamentals[cite: 4]</li>
+                        <li>• Router & Switch Configuration[cite: 4]</li>
+                        <li>• LAN/WAN Troubleshooting[cite: 4]</li>
+                        <li>• Fortinet Firewall Administrator[cite: 4]</li>
+                        <li>• IP Addressing & Connectivity[cite: 4]</li>
+                    </ul>
+                </div>
+                <!-- Cybersecurity -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Cybersecurity & SecOps</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li>• Threat Detection & Incident Response[cite: 4]</li>
+                        <li>• Vulnerability Assessment[cite: 4]</li>
+                        <li>• Security Best Practices[cite: 4]</li>
+                        <li>• ISC2 & CompTIA Security Concepts[cite: 4]</li>
+                        <li>• Enterprise Firewall Management[cite: 4]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Interactive Terminal & Contact Form -->
-    <section id="contact" class="container">
-      <h2 class="section-title">Secure Connection</h2>
-      <div class="contact-wrapper">
-        <form id="contact-form" class="styled-form">
-          <div class="input-group">
-            <label for="name">Identifier / Name:</label>
-            <input type="text" id="name" name="name" required placeholder="John Doe">
-          </div>
+    <!-- CERTIFICATIONS SHOWCASE -->
+    <section id="certifications" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">
+                        <span class="text-emerald-400 font-mono text-xl">03.</span> Professional Certifications
+                    </h2>
+                    <p class="text-slate-400 text-sm">Over 77+ verified certifications completed from top-tier institutions.</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex gap-2">
+                    <button onclick="filterCerts('all')" class="px-4 py-2 rounded-lg bg-emerald-500 text-slate-950 text-xs font-semibold">All (77)</button>
+                    <button onclick="filterCerts('security')" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700">Cybersecurity</button>
+                    <button onclick="filterCerts('network')" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700">Networking</button>
+                </div>
+            </div>
 
-          <div class="input-group">
-            <label for="email">Secure Address / Email:</label>
-            <input type="email" id="email" name="email" required placeholder="name@domain.com">
-          </div>
-
-          <div class="input-group">
-            <label for="message">Transmission Message:</label>
-            <textarea id="message" name="message" rows="4" required placeholder="Enter request details..."></textarea>
-          </div>
-
-          <button type="submit" class="btn primary-btn">Transmit Message</button>
-          <p id="form-status" class="status-output" aria-live="polite"></p>
-        </form>
-      </div>
+            <!-- Cert Grid -->
+            <div id="certGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cert 1 -->
+                <div class="cert-card security bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">Infosec • Oct 2026</span>
+                        <h4 class="font-bold text-lg mt-3 mb-2">Technical Deep Dive with Incident Response Tools</h4>
+                    </div>
+                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-emerald-400"></i> Verified Certificate</span>
+                </div>
+                <!-- Cert 2 -->
+                <div class="cert-card network bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded">Fortinet • Aug 2026</span>
+                        <h4 class="font-bold text-lg mt-3 mb-2">Network Security Support Engineer</h4>
+                    </div>
+                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-cyan-400"></i> Verified Certificate</span>
+                </div>
+                <!-- Cert 3 -->
+                <div class="cert-card security bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-purple-400 bg-purple-500/10 px-2 py-1 rounded">ISC2 • Aug 2026</span>
+                        <h4 class="font-bold text-lg mt-3 mb-2">Security Operations & Network Security</h4>
+                    </div>
+                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-purple-400"></i> Verified Certificate</span>
+                </div>
+                <!-- Cert 4 -->
+                <div class="cert-card security bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">Cisco • 2026</span>
+                        <h4 class="font-bold text-lg mt-3 mb-2">Junior Cybersecurity Analyst Career Path</h4>
+                    </div>
+                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-emerald-400"></i> Verified Certificate & Badge</span>
+                </div>
+                <!-- Cert 5 -->
+                <div class="cert-card network bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded">Cisco • 2026</span>
+                        <h4 class="font-bold text-lg mt-3 mb-2">Network Technician Career Path</h4>
+                    </div>
+                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-cyan-400"></i> Verified Certificate & Badge</span>
+                </div>
+                <!-- Cert 6 -->
+                <div class="cert-card security bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-2 py-1 rounded">Microsoft • Aug 2026</span>
+                        <h4 class="font-bold text-lg mt-3 mb-2">Full-Stack Developer Capstone Project</h4>
+                    </div>
+                    <span class="text-xs text-slate-400 mt-4"><i class="fa-solid fa-circle-check text-blue-400"></i> Verified Certificate</span>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2026 Secured Operations | All Systems Operational</p>
-  </footer>
+    <!-- INTERACTIVE TERMINAL -->
+    <section id="terminal" class="py-24 px-6 border-t border-slate-800/60">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">
+                <span class="text-emerald-400 font-mono text-xl">04.</span> Interactive Terminal CLI
+            </h2>
+            <p class="text-slate-400 text-center text-sm mb-8">Type commands below like <code class="text-emerald-400">help</code>, <code class="text-emerald-400">skills</code>, <code class="text-emerald-400">contact</code>, or <code class="text-emerald-400">clear</code>.</p>
+            
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden font-mono text-sm">
+                <!-- Terminal Header -->
+                <div class="bg-slate-900 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                        <span class="text-xs text-slate-400 ml-2">mushahid@portfolio:~</span>
+                    </div>
+                </div>
+                <!-- Terminal Body -->
+                <div id="terminalBody" class="p-6 h-64 overflow-y-auto text-slate-300 space-y-3">
+                    <div>Welcome to Mushahid Ali Kazmi's Interactive Terminal. Type <span class="text-emerald-400 font-bold">help</span> to view available commands.</div>
+                </div>
+                <!-- Terminal Input -->
+                <div class="bg-slate-900/60 border-t border-slate-800 px-4 py-3 flex items-center gap-2">
+                    <span class="text-emerald-400">➜</span>
+                    <span class="text-cyan-400">~</span>
+                    <input type="text" id="terminalInput" autofocus class="bg-transparent flex-1 focus:outline-none text-slate-100 font-mono" placeholder="Type a command...">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/40">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">
+                <span class="text-emerald-400 font-mono text-xl">05.</span> Let's Work Together
+            </h2>
+            <p class="text-slate-400 mb-10">Looking for an IT Support Specialist, Cybersecurity Analyst, or Developer? Get in touch with me directly.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="mailto:mushahid.ssaak7610@gmail.com" class="flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500 transition">
+                    <i class="fa-solid fa-envelope text-emerald-400 text-xl"></i>
+                    <span class="text-sm font-medium">mushahid.ssaak7610@gmail.com</span>[cite: 1]
+                </a>
+                <a href="tel:+923408825529" class="flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500 transition">
+                    <i class="fa-solid fa-phone text-cyan-400 text-xl"></i>
+                    <span class="text-sm font-medium">+92 340 8825529</span>[cite: 1]
+                </a>
+                <div class="flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-900 border border-slate-800">
+                    <i class="fa-solid fa-location-dot text-purple-400 text-xl"></i>
+                    <span class="text-sm font-medium">Garhi Dupatta, Muzaffarabad, AJK, Pakistan</span>[cite: 1]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 text-center border-t border-slate-800 text-xs text-slate-500 font-mono">
+        &copy; 2026 Mushahid Ali Kazmi. Built with modern web technologies.
+    </footer>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
+    <script>
+        // Theme Toggle (Light / Dark)
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.setAttribute('data-theme', 'light');
+                icon.className = 'fa-solid fa-sun';
+                document.body.className = "bg-slate-50 text-slate-900 font-sans antialiased";
+            } else {
+                html.classList.add('dark');
+                html.setAttribute('data-theme', 'dark');
+                icon.className = 'fa-solid fa-moon';
+                document.body.className = "bg-slate-950 text-slate-100 font-sans antialiased";
+            }
+        }
+
+        // Color Palette Switcher
+        function changePalette(paletteName) {
+            document.documentElement.setAttribute('data-palette', paletteName);
+        }
+
+        // Certification Filter
+        function filterCerts(category) {
+            const cards = document.querySelectorAll('.cert-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Terminal Logic
+        const terminalInput = document.getElementById('terminalInput');
+        const terminalBody = document.getElementById('terminalBody');
+
+        terminalInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const cmd = terminalInput.value.trim().toLowerCase();
+                appendTerminalOutput(`➜ ~ ${terminalInput.value}`);
+                processCommand(cmd);
+                terminalInput.value = '';
+            }
+        });
+
+        function appendTerminalOutput(text, isHtml = false) {
+            const div = document.createElement('div');
+            if (isHtml) {
+                div.innerHTML = text;
+            } else {
+                div.textContent = text;
+            }
+            terminalBody.appendChild(div);
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+
+        function processCommand(cmd) {
+            switch(cmd) {
+                case 'help':
+                    appendTerminalOutput('Available commands: <span class="text-emerald-400">about, skills, certs, contact, clear</span>', true);
+                    break;
+                case 'about':
+                    appendTerminalOutput('Mushahid Ali Kazmi: IT Support Specialist, Cybersecurity Analyst & Full-Stack Developer studying at Virtual University of Pakistan[cite: 4].');
+                    break;
+                case 'skills':
+                    appendTerminalOutput('Skills: IT Support, TCP/IP, Cybersecurity, Fortinet Firewalls, C#/.NET, Systems Diagnostics, Help Desk[cite: 4].');
+                    break;
+                case 'certs':
+                    appendTerminalOutput('Over 77+ certifications completed from IBM, Google, Microsoft, Cisco, ISC2, and Fortinet!');
+                    break;
+                case 'contact':
+                    appendTerminalOutput('Email: mushahid.ssaak7610@gmail.com | Phone: +92 340 8825529[cite: 1]');
+                    break;
+                case 'clear':
+                    terminalBody.innerHTML = '';
+                    break;
+                case '':
+                    break;
+                default:
+                    appendTerminalOutput(`Command not recognized: ${cmd}. Type 'help' for available commands.`);
+            }
+        }
+    </script>
 </body>
 </html>
